@@ -33,6 +33,14 @@ grid.blend(srcImageObject, dstImageObject, offsetX, offsetY);
 * (option)offsetY : number
 * retrun : imageObject
 
+## copy
+
+```
+grid.copy(imageObject);
+```
+
+* return : imageObject
+
 # Data Type
 
 ## imageObject
