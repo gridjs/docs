@@ -1,0 +1,14 @@
+{
+  "name": "GridJS",
+  "version": "0.1.0",
+  "description": "A JavaScript Imaging Library",
+  "author": "Sneezry",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gridjs/gridjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gridjs/gridjs/issues"
+  }
+}
