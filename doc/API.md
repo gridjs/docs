@@ -116,7 +116,7 @@ Return a two-dimensional array of Gauss core with the given size and sigma.
 two-dimensional array gridjs.gaussCore(size, sigma, derivative)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>size</td><td>The size of the Gauss core.</td></tr><tr><td>number</td><td><br>(optional) sigma</td><td>Sigma for calculating Gauss core, default value is 1.</td></tr><tr><td>number</td><td><br>(optional) derivative</td><td>0 for the first derivative Gx, 1 for the first derivative Gy, 2 for the second derivative Gxy.</td></tr></table>
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>size</td><td>Size of the Gauss core.</td></tr><tr><td>number</td><td><br>(optional) sigma</td><td>Sigma for calculating Gauss core, default value is 1.</td></tr><tr><td>number</td><td><br>(optional) derivative</td><td>0 for the first derivative Gx, 1 for the first derivative Gy, 2 for the second derivative Gxy.</td></tr></table>
 
 ---
 
@@ -128,7 +128,7 @@ Return a new two-dimensional array with gauss filter.
 two-dimensional array gridjs.gaussCore(srcArray, size, sigma, derivative)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to calculate Gauss filter with.</td></tr><tr><td>number</td><td>size</td><td>The size of the Gauss core.</td></tr><tr><td>number</td><td><br>(optional) sigma</td><td>Sigma for calculating Gauss core, default value is 1.</td></tr><tr><td>number</td><td><br>(optional) derivative</td><td>0 for the first derivative Gx, 1 for the first derivative Gy, 2 for the second derivative Gxy.</td></tr></table>
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to calculate Gauss filter with.</td></tr><tr><td>number</td><td>size</td><td>Size of the Gauss core.</td></tr><tr><td>number</td><td><br>(optional) sigma</td><td>Sigma for calculating Gauss core, default value is 1.</td></tr><tr><td>number</td><td><br>(optional) derivative</td><td>0 for the first derivative Gx, 1 for the first derivative Gy, 2 for the second derivative Gxy.</td></tr></table>
 
 ---
 
@@ -197,7 +197,7 @@ Return a new two-dimensional array contains only zeros with the given size.
 two-dimensional array gridjs.zeros(width, height)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number or two-dimensional array</td><td>width</td><td>The width of size. If width is a two-dimensional array, the result has the same size with it.</td></tr><tr><td>number</td><td>height</td><td>The height of size. if width is a two-dimensional array, this parameter will be ignored.</td></tr></table>
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number or two-dimensional array</td><td>width</td><td>Width of size. If width is a two-dimensional array, the result has the same size with it.</td></tr><tr><td>number</td><td>height</td><td>Height of size. if width is a two-dimensional array, this parameter will be ignored.</td></tr></table>
 
 ---
 
@@ -209,7 +209,7 @@ Return a new two-dimensional array contains only ones with the given size.
 two-dimensional array gridjs.ones(width, height)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number or two-dimensional array</td><td>width</td><td>The width of size. If width is a two-dimensional array, the result has the same size with it.</td></tr><tr><td>number</td><td>height</td><td>The height of size. if width is a two-dimensional array, this parameter will be ignored.</td></tr></table>
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number or two-dimensional array</td><td>width</td><td>Width of size. If width is a two-dimensional array, the result has the same size with it.</td></tr><tr><td>number</td><td>height</td><td>Height of size. if width is a two-dimensional array, this parameter will be ignored.</td></tr></table>
 
 ---
 
@@ -217,13 +217,13 @@ two-dimensional array gridjs.ones(width, height)
 
 ### Data Type
 
-<table class="table table-striped"><tr><th>Attributes</th><th></th><th></th></tr><tr><td>number</td><td>width</td><td>Width of the image.</td></tr><tr><td>number</td><td>height</td><td>Height of the image.</td></tr><tr><td>image data</td><td>imageData</td><td>Image data of the image. See https://developer.mozilla.org/en-US/docs/Web/API/ImageData.</td></tr><tr><td>pixel object</td><td>pixel</td><td>Pixel object of the image.</td></tr><tr><td>ImageObject</td><td>origin</td><td>The origin image object of the current image object. This parameter is only available when current image object is created from ImageObject.load method.</td></tr><tr><td>number</td><td>originLeft</td><td>The left position of the origin image. This parameter is only available when current image object is created from ImageObject.load method.</td></tr><tr><td>number</td><td>originTop</td><td>The top position of the origin image. This parameter is only available when current image object is created from ImageObject.load method.</td></tr></table>
+<table class="table table-striped"><tr><th>Attributes</th><th></th><th></th></tr><tr><td>number</td><td>width</td><td>Width of the image.</td></tr><tr><td>number</td><td>height</td><td>Height of the image.</td></tr><tr><td>image data</td><td>imageData</td><td>Image data of the image. See https://developer.mozilla.org/en-US/docs/Web/API/ImageData.</td></tr><tr><td>pixel object</td><td>pixel</td><td>Pixel object of the image.</td></tr><tr><td>ImageObject</td><td>origin</td><td>The origin image object of the current image object. This parameter is only available when current image object is created from ImageObject.load method.</td></tr><tr><td>number</td><td>originLeft</td><td>Left position of the origin image. This parameter is only available when current image object is created from ImageObject.load method.</td></tr><tr><td>number</td><td>originTop</td><td>Top position of the origin image. This parameter is only available when current image object is created from ImageObject.load method.</td></tr></table>
 
 ---
 
 ### Pixel Object
 
-<table class="table table-striped"><tr><th>Attributes</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>r</td><td>Red channel of the image. Values are between 0 and 255.</td></tr><tr><td>two-dimensional array</td><td>g</td><td>Green channel of the image. Values are between 0 and 255.</td></tr><tr><td>two-dimensional array</td><td>b</td><td>Blue channel of the image. Values are between 0 and 255.</td></tr><tr><td>two-dimensional array</td><td>a</td><td>alpha channel of the image. Values are between 0 and 1.</td></tr><tr><td>two-dimensional array</td><td>G</td><td>luminance of the image. Values are between 0 and 255. This parameter is only available when the image object is converted to grayscale. If the image is grayscale, parameters r, g and b will point to G, that is to say, if you change a pixel in G, change r, g and b will be changed as well. You should only edit G channel in a grayscale image object.</td></tr></table>
+<table class="table table-striped"><tr><th>Attributes</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>r</td><td>Red channel of the image. Values are between 0 and 255.</td></tr><tr><td>two-dimensional array</td><td>g</td><td>Green channel of the image. Values are between 0 and 255.</td></tr><tr><td>two-dimensional array</td><td>b</td><td>Blue channel of the image. Values are between 0 and 255.</td></tr><tr><td>two-dimensional array</td><td>a</td><td>alpha channel of the image. Values are between 0 and 1.</td></tr><tr><td>two-dimensional array</td><td>G</td><td>luminance of the image. Values are between 0 and 255. This parameter is only available when the image object is converted to grayscale. If the image is grayscale, parameters r, g and b will point to G, that is to say, if you change a pixel in G, channel r, g and b will be changed as well. You should only edit G channel in a grayscale image object.</td></tr></table>
 
 ---
 
@@ -283,7 +283,7 @@ The image object will be stretched with the give size. If you'd like to crop an 
 ImageObject ImageObject.resize(newWidth, newHeight)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>newWidth</td><td>The new width of the image object.</td></tr><tr><td>number</td><td>newHeight</td><td>The new height of the image object.</td></tr></table>
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>newWidth</td><td>New width of the image object.</td></tr><tr><td>number</td><td>newHeight</td><td>New height of the image object.</td></tr></table>
 
 ---
 
@@ -297,7 +297,7 @@ Notice: this method probably change the size of image data. For exmaple, if the 
 ImageObject ImageObject.rotate(degree)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>degree</td><td>The degree to rotate the image object with.</td></tr></table>
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>degree</td><td>Degree to rotate the image object with.</td></tr></table>
 
 ---
 
