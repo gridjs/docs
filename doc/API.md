@@ -125,7 +125,7 @@ two-dimensional array gridjs.gaussCore(size, sigma, derivative)
 Return a new two-dimensional array with gauss filter.
 
 ```
-two-dimensional array gridjs.gaussCore(size, sigma, derivative)
+two-dimensional array gridjs.gaussCore(srcArray, size, sigma, derivative)
 ```
 
 <table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to calculate Gauss filter with.</td></tr><tr><td>number</td><td>size</td><td>The size of the Gauss core.</td></tr><tr><td>number</td><td><br>(optional) sigma</td><td>Sigma for calculating Gauss core, default value is 1.</td></tr><tr><td>number</td><td><br>(optional) derivative</td><td>0 for the first derivative Gx, 1 for the first derivative Gy, 2 for the second derivative Gxy.</td></tr></table>
