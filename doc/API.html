@@ -176,6 +176,96 @@
     </a>
   </li>
 
+  <li class="level_3">
+    <a href="#index_Pixel Object" title="Pixel Object">
+      <i class="icon-chevron-right"></i>Pixel Object
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.grayscale" title="ImageObject.grayscale">
+      <i class="icon-chevron-right"></i>ImageObject.grayscale
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.show" title="ImageObject.show">
+      <i class="icon-chevron-right"></i>ImageObject.show
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.blend" title="ImageObject.blend">
+      <i class="icon-chevron-right"></i>ImageObject.blend
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.copy" title="ImageObject.copy">
+      <i class="icon-chevron-right"></i>ImageObject.copy
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.resize" title="ImageObject.resize">
+      <i class="icon-chevron-right"></i>ImageObject.resize
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.rotate" title="ImageObject.rotate">
+      <i class="icon-chevron-right"></i>ImageObject.rotate
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.crop" title="ImageObject.crop">
+      <i class="icon-chevron-right"></i>ImageObject.crop
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.updateImageData" title="ImageObject.updateImageData">
+      <i class="icon-chevron-right"></i>ImageObject.updateImageData
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.update" title="ImageObject.update">
+      <i class="icon-chevron-right"></i>ImageObject.update
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.updatePixel" title="ImageObject.updatePixel">
+      <i class="icon-chevron-right"></i>ImageObject.updatePixel
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.paste" title="ImageObject.paste">
+      <i class="icon-chevron-right"></i>ImageObject.paste
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.blank" title="ImageObject.blank">
+      <i class="icon-chevron-right"></i>ImageObject.blank
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.grayBlank" title="ImageObject.grayBlank">
+      <i class="icon-chevron-right"></i>ImageObject.grayBlank
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.load" title="ImageObject.load">
+      <i class="icon-chevron-right"></i>ImageObject.load
+    </a>
+  </li>
+
 </ul>
 
     </div>
@@ -269,7 +359,73 @@
 <hr>
 <h1>ImageObject</h1>
 <h3>Data Type</h3>
+<table class="table table-striped"><tr><th>number</th><th>width</th><th>Width of the image.</th></tr><tr><td>number</td><td>height</td><td>Height of the image.</td></tr><tr><td>image data</td><td>imageData</td><td>Image data of the image. See <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData">https://developer.mozilla.org/en-US/docs/Web/API/ImageData</a>.</td></tr><tr><td>pixel object</td><td>pixel</td><td>Pixel object of the image.</td></tr><tr><td>ImageObject</td><td>origin</td><td>The origin image object of the current image object. This parameter is only available when current image object is created from ImageObject.load method.</td></tr><tr><td>number</td><td>originLeft</td><td>The left position of the origin image. This parameter is only available when current image object is created from ImageObject.load method.</td></tr><tr><td>number</td><td>originTop</td><td>The top position of the origin image. This parameter is only available when current image object is created from ImageObject.load method.</td></tr></table>
 
+<hr>
+<h3>Pixel Object</h3>
+<table class="table table-striped"><tr><th>two-dimensional array</th><th>r</th><th>Red channel of the image. Values are between 0 and 255.</th></tr><tr><td>two-dimensional array</td><td>g</td><td>Green channel of the image. Values are between 0 and 255.</td></tr><tr><td>two-dimensional array</td><td>b</td><td>Blue channel of the image. Values are between 0 and 255.</td></tr><tr><td>two-dimensional array</td><td>a</td><td>alpha channel of the image. Values are between 0 and 1.</td></tr><tr><td>two-dimensional array</td><td>G</td><td>luminance of the image. Values are between 0 and 255. This parameter is only available when the image object is converted to grayscale. If the image is grayscale, parameters r, g and b will point to G, that is to say, if you change a pixel in G, change r, g and b will be changed as well. You should only edit G channel in a grayscale image object.</td></tr></table>
+
+<hr>
+<h3>ImageObject.grayscale</h3>
+<p>Convert an image object to grayscale. This method modifies origin data.</p><pre><code>ImageObject ImageObject.grayscale()
+</code></pre><hr>
+<h3>ImageObject.show</h3>
+<p>Show the image object on the given canvas element.</p><pre><code>ImageObject ImageObject.show(canvas)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>canvas element</td><td>canvas</td><td>The canvas on which to show the image object.</td></tr></table>
+
+<hr>
+<h3>ImageObject.blend</h3>
+<p>Blend two image object. This method modifies origin data.</p><p>The current image object will be blended with the given image object. If you&#39;d like to cover the current image object with another image object, see <code>ImageObject.paste</code>.</p><pre><code>ImageObject ImageObject.blend(srcImageObject, offsetX, offsetY)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>ImageObject</td><td>srcImageObject</td><td>The image object to blend on the current image object.</td></tr><tr><td>number</td><td>offsetX</td><td>The x offset of srcImageObject on the current image object.</td></tr><tr><td>number</td><td>offsetY</td><td>The y offset of srcImageObject on the current image object.</td></tr></table>
+
+<hr>
+<h3>ImageObject.copy</h3>
+<p>Create a copy of the current image object.</p><pre><code>ImageObject ImageObject.copy()
+</code></pre><hr>
+<h3>ImageObject.resize</h3>
+<p>Resize the current image object. This method modifies origin data.</p><p>The image object will be stretched with the give size. If you&#39;d like to crop an image object, see <code>ImageObject.crop</code>.</p><pre><code>ImageObject ImageObject.resize(newWidth, newHeight)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>newWidth</td><td>The new width of the image object.</td></tr><tr><td>number</td><td>newHeight</td><td>The new height of the image object.</td></tr></table>
+
+<hr>
+<h3>ImageObject.rotate</h3>
+<p>Rotate the image object counterclockwise with the given degree. This method modifies origin data.</p><p>Notice: this method probably change the size of image data. For exmaple, if the origin image is a square, the width and height will change to 1.414 times after rotating 45 degress.</p><pre><code>ImageObject ImageObject.rotate(degree)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>degree</td><td>The degree to rotate the image object with.</td></tr></table>
+
+<hr>
+<h3>ImageObject.crop</h3>
+<p>Crop the image object with the given position and size. This method modifies origin data.</p><p>If you&#39;d like to create a dynamic crop of the image object(changes on the crop image object will effect the origin image object), see <code>ImageObject.load</code>.</p><pre><code>ImageObject ImageObject.crop(left, top, cropWidth, cropHeight)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>left</td><td>Left position of the image object to crop.</td></tr><tr><td>number</td><td>top</td><td>Top position of the image object to crop.</td></tr><tr><td>number</td><td>cropWidth</td><td>Width of the size to crop.</td></tr><tr><td>number</td><td>cropHeight</td><td>Height of the size to crop.</td></tr></table>
+
+<hr>
+<h3>ImageObject.updateImageData</h3>
+<p>Update the image object with pixel object of the image object. This method modifies origin data. Width and height attributes will be updated as well.</p><p>You should always call the method after you edit pixel object of an image object.</p><pre><code>ImageObject ImageObject.updateImageData()
+</code></pre><hr>
+<h3>ImageObject.update</h3>
+<p>A alias of <code>ImageObject.updateImageData</code>.</p><hr>
+<h3>ImageObject.updatePixel</h3>
+<p>Update the image object with image data of the image object. This method modifies origin data. Width and height attributes will be updated as well.</p><p>You should always call the method after you edit image data of an image object.</p><p>Notice: edit image data is not recommended.</p><pre><code>ImageObject ImageObject.updatePixel()
+</code></pre><hr>
+<h3>ImageObject.paste</h3>
+<p>Past another image object to the current image object with the given position.</p><pre><code>ImageObject ImageObject.paste(srcImageObject, left, top)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>ImageObject</td><td>srcImageObject</td><td>The image object to paste.</td></tr><tr><td>number</td><td>left</td><td>Left position of the image object to paste.</td></tr><tr><td>number</td><td>top</td><td>Top position of the image object to paste.</td></tr></table>
+
+<hr>
+<h3>ImageObject.blank</h3>
+<p>Create a new blank image object with the given size.</p><pre><code>ImageObject ImageObject.blank(width, height)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>width</td><td>Width of the blank image object.</td></tr><tr><td>number</td><td>height</td><td>Height of the blank image object.</td></tr></table>
+
+<hr>
+<h3>ImageObject.grayBlank</h3>
+<p>Create a new grayscale blank image object with the given size.</p><pre><code>ImageObject ImageObject.grayBlank(width, height)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>width</td><td>Width of the grayscale blank image object.</td></tr><tr><td>number</td><td>height</td><td>Height of the grayscale blank image object.</td></tr></table>
+
+<hr>
+<h3>ImageObject.load</h3>
+<p>Create a new dynamic crop image object of the current image object.</p><p>You should always call <code>ImageObject.update</code> method after edit a dynamic crop image object to make changes effective on the origin image object.</p><pre><code>ImageObject ImageObject.load(left, top, width, height)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>left</td><td>Left position of the image object to load.</td></tr><tr><td>number</td><td>top</td><td>Top position of the image object to load.</td></tr><tr><td>number</td><td>width</td><td>Width of the size to load.</td></tr><tr><td>number</td><td>height</td><td>Height of the size to load.</td></tr></table>
+
+<hr>
+<p>EOF</p>
       </section>
   
     </div>

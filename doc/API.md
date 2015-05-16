@@ -216,3 +216,185 @@ two-dimensional array gridjs.ones(width, height)
 # ImageObject
 
 ### Data Type
+
+<table class="table table-striped"><tr><th>number</th><th>width</th><th>Width of the image.</th></tr><tr><td>number</td><td>height</td><td>Height of the image.</td></tr><tr><td>image data</td><td>imageData</td><td>Image data of the image. See https://developer.mozilla.org/en-US/docs/Web/API/ImageData.</td></tr><tr><td>pixel object</td><td>pixel</td><td>Pixel object of the image.</td></tr><tr><td>ImageObject</td><td>origin</td><td>The origin image object of the current image object. This parameter is only available when current image object is created from ImageObject.load method.</td></tr><tr><td>number</td><td>originLeft</td><td>The left position of the origin image. This parameter is only available when current image object is created from ImageObject.load method.</td></tr><tr><td>number</td><td>originTop</td><td>The top position of the origin image. This parameter is only available when current image object is created from ImageObject.load method.</td></tr></table>
+
+---
+
+### Pixel Object
+
+<table class="table table-striped"><tr><th>two-dimensional array</th><th>r</th><th>Red channel of the image. Values are between 0 and 255.</th></tr><tr><td>two-dimensional array</td><td>g</td><td>Green channel of the image. Values are between 0 and 255.</td></tr><tr><td>two-dimensional array</td><td>b</td><td>Blue channel of the image. Values are between 0 and 255.</td></tr><tr><td>two-dimensional array</td><td>a</td><td>alpha channel of the image. Values are between 0 and 1.</td></tr><tr><td>two-dimensional array</td><td>G</td><td>luminance of the image. Values are between 0 and 255. This parameter is only available when the image object is converted to grayscale. If the image is grayscale, parameters r, g and b will point to G, that is to say, if you change a pixel in G, change r, g and b will be changed as well. You should only edit G channel in a grayscale image object.</td></tr></table>
+
+---
+
+### ImageObject.grayscale
+
+Convert an image object to grayscale. This method modifies origin data.
+
+```
+ImageObject ImageObject.grayscale()
+```
+
+---
+
+### ImageObject.show
+
+Show the image object on the given canvas element.
+
+```
+ImageObject ImageObject.show(canvas)
+```
+
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>canvas element</td><td>canvas</td><td>The canvas on which to show the image object.</td></tr></table>
+
+---
+
+### ImageObject.blend
+
+Blend two image object. This method modifies origin data.
+
+The current image object will be blended with the given image object. If you'd like to cover the current image object with another image object, see `ImageObject.paste`.
+
+```
+ImageObject ImageObject.blend(srcImageObject, offsetX, offsetY)
+```
+
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>ImageObject</td><td>srcImageObject</td><td>The image object to blend on the current image object.</td></tr><tr><td>number</td><td>offsetX</td><td>The x offset of srcImageObject on the current image object.</td></tr><tr><td>number</td><td>offsetY</td><td>The y offset of srcImageObject on the current image object.</td></tr></table>
+
+---
+
+### ImageObject.copy
+
+Create a copy of the current image object.
+
+```
+ImageObject ImageObject.copy()
+```
+
+---
+
+### ImageObject.resize
+
+Resize the current image object. This method modifies origin data.
+
+The image object will be stretched with the give size. If you'd like to crop an image object, see `ImageObject.crop`.
+
+```
+ImageObject ImageObject.resize(newWidth, newHeight)
+```
+
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>newWidth</td><td>The new width of the image object.</td></tr><tr><td>number</td><td>newHeight</td><td>The new height of the image object.</td></tr></table>
+
+---
+
+### ImageObject.rotate
+
+Rotate the image object counterclockwise with the given degree. This method modifies origin data.
+
+Notice: this method probably change the size of image data. For exmaple, if the origin image is a square, the width and height will change to 1.414 times after rotating 45 degress.
+
+```
+ImageObject ImageObject.rotate(degree)
+```
+
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>degree</td><td>The degree to rotate the image object with.</td></tr></table>
+
+---
+
+### ImageObject.crop
+
+Crop the image object with the given position and size. This method modifies origin data.
+
+If you'd like to create a dynamic crop of the image object(changes on the crop image object will effect the origin image object), see `ImageObject.load`.
+
+```
+ImageObject ImageObject.crop(left, top, cropWidth, cropHeight)
+```
+
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>left</td><td>Left position of the image object to crop.</td></tr><tr><td>number</td><td>top</td><td>Top position of the image object to crop.</td></tr><tr><td>number</td><td>cropWidth</td><td>Width of the size to crop.</td></tr><tr><td>number</td><td>cropHeight</td><td>Height of the size to crop.</td></tr></table>
+
+---
+
+### ImageObject.updateImageData
+
+Update the image object with pixel object of the image object. This method modifies origin data. Width and height attributes will be updated as well.
+
+You should always call the method after you edit pixel object of an image object.
+
+```
+ImageObject ImageObject.updateImageData()
+```
+
+---
+
+### ImageObject.update
+
+A alias of `ImageObject.updateImageData`.
+
+---
+
+### ImageObject.updatePixel
+
+Update the image object with image data of the image object. This method modifies origin data. Width and height attributes will be updated as well.
+
+You should always call the method after you edit image data of an image object.
+
+Notice: edit image data is not recommended.
+
+```
+ImageObject ImageObject.updatePixel()
+```
+
+---
+
+### ImageObject.paste
+
+Past another image object to the current image object with the given position.
+
+```
+ImageObject ImageObject.paste(srcImageObject, left, top)
+```
+
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>ImageObject</td><td>srcImageObject</td><td>The image object to paste.</td></tr><tr><td>number</td><td>left</td><td>Left position of the image object to paste.</td></tr><tr><td>number</td><td>top</td><td>Top position of the image object to paste.</td></tr></table>
+
+---
+
+### ImageObject.blank
+
+Create a new blank image object with the given size.
+
+```
+ImageObject ImageObject.blank(width, height)
+```
+
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>width</td><td>Width of the blank image object.</td></tr><tr><td>number</td><td>height</td><td>Height of the blank image object.</td></tr></table>
+
+---
+
+### ImageObject.grayBlank
+
+Create a new grayscale blank image object with the given size.
+
+```
+ImageObject ImageObject.grayBlank(width, height)
+```
+
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>width</td><td>Width of the grayscale blank image object.</td></tr><tr><td>number</td><td>height</td><td>Height of the grayscale blank image object.</td></tr></table>
+
+---
+
+### ImageObject.load
+
+Create a new dynamic crop image object of the current image object.
+
+You should always call `ImageObject.update` method after edit a dynamic crop image object to make changes effective on the origin image object.
+
+```
+ImageObject ImageObject.load(left, top, width, height)
+```
+
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>left</td><td>Left position of the image object to load.</td></tr><tr><td>number</td><td>top</td><td>Top position of the image object to load.</td></tr><tr><td>number</td><td>width</td><td>Width of the size to load.</td></tr><tr><td>number</td><td>height</td><td>Height of the size to load.</td></tr></table>
+
+---
+
+EOF
