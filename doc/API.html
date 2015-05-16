@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GridJS Documentation</title>
+    <meta name="keywords" content="GridJS" />
+    <meta name="description" content="A JavaScript Imaging Library" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">GridJS</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./API.html">API</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>GridJS <small>Version: 0.1.0 By @Sneezry</small></h1>
+        <p class="lead">
+          A JavaScript Imaging Library
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+  	<div class="col-md-3">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li class="level_1">
+    <a href="#index_gridjs" title="gridjs">
+      <i class="icon-chevron-right"></i>gridjs
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.getImageObject" title="gridjs.getImageObject">
+      <i class="icon-chevron-right"></i>gridjs.getImageObject
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.open" title="gridjs.open">
+      <i class="icon-chevron-right"></i>gridjs.open
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.getImageObjectFromURL" title="gridjs.getImageObjectFromURL">
+      <i class="icon-chevron-right"></i>gridjs.getImageObjectFromURL
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.getImageObjectFromImageData" title="gridjs.getImageObjectFromImageData">
+      <i class="icon-chevron-right"></i>gridjs.getImageObjectFromImageData
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.getImageObjectFromPixel" title="gridjs.getImageObjectFromPixel">
+      <i class="icon-chevron-right"></i>gridjs.getImageObjectFromPixel
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.convolution" title="gridjs.convolution">
+      <i class="icon-chevron-right"></i>gridjs.convolution
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.conv" title="gridjs.conv">
+      <i class="icon-chevron-right"></i>gridjs.conv
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.abs" title="gridjs.abs">
+      <i class="icon-chevron-right"></i>gridjs.abs
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.square" title="gridjs.square">
+      <i class="icon-chevron-right"></i>gridjs.square
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.sqrt" title="gridjs.sqrt">
+      <i class="icon-chevron-right"></i>gridjs.sqrt
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.gaussCore" title="gridjs.gaussCore">
+      <i class="icon-chevron-right"></i>gridjs.gaussCore
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.gauss" title="gridjs.gauss">
+      <i class="icon-chevron-right"></i>gridjs.gauss
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.add" title="gridjs.add">
+      <i class="icon-chevron-right"></i>gridjs.add
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.minus" title="gridjs.minus">
+      <i class="icon-chevron-right"></i>gridjs.minus
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.multiply" title="gridjs.multiply">
+      <i class="icon-chevron-right"></i>gridjs.multiply
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.divide" title="gridjs.divide">
+      <i class="icon-chevron-right"></i>gridjs.divide
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.zeros" title="gridjs.zeros">
+      <i class="icon-chevron-right"></i>gridjs.zeros
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_gridjs.ones" title="gridjs.ones">
+      <i class="icon-chevron-right"></i>gridjs.ones
+    </a>
+  </li>
+
+  <li class="level_1">
+    <a href="#index_ImageObject" title="ImageObject">
+      <i class="icon-chevron-right"></i>ImageObject
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_Data Type" title="Data Type">
+      <i class="icon-chevron-right"></i>Data Type
+    </a>
+  </li>
+
+</ul>
+
+    </div>
+    <div class="col-md-9">
+      <section>
+        <h1>gridjs</h1>
+<h3>gridjs.getImageObject</h3>
+<p>Create an ImageObjet from image URL, imageData or pixel object.</p><pre><code>gridjs.getImageObject(image, callback)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>string or image data or pixel object</td><td>image</td><td>If you specify the image parameter with string, it should be the URL of the image.</td></tr><tr><td>function</td><td>callback</td><td>The callback parameter should be a function that looks like this:<br><br>function(imageObject) {...};</td></tr></table>
+
+<hr>
+<h3>gridjs.open</h3>
+<p>An alias of <code>gridjs.getImageObject</code>.</p><hr>
+<h3>gridjs.getImageObjectFromURL</h3>
+<p>Create an ImageObjet from image URL.</p><pre><code>gridjs.getImageObjectFromURL(url, callback)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>string</td><td>url</td><td>URL of an image for creating ImageObjcet.</td></tr><tr><td>function</td><td>callback</td><td>The callback parameter should be a function that looks like this:<br><br>function(imageObject) {...};</td></tr></table>
+
+<hr>
+<h3>gridjs.getImageObjectFromImageData</h3>
+<p>Create an ImageObject from image data.</p><pre><code>ImageObject gridjs.getImageObjectFromImageData(imageData)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>image data</td><td>imageData</td><td>Image data of an image for creating ImageObjcet.</td></tr></table>
+
+<hr>
+<h3>gridjs.getImageObjectFromPixel</h3>
+<p>Create an ImageObject from pixel object.</p><pre><code>ImageObject gridjs.getImageObjectFromPixel(pixel)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>pixel object</td><td>pixel</td><td>Pixel object of an image for creating ImageObjcet.</td></tr></table>
+
+<hr>
+<h3>gridjs.convolution</h3>
+<p>Calculate convolution of two two-dimensional arrays. The result has the same size with srcArray. The result is a new two two-dimensional array.</p><pre><code>two-dimensional array gridjs.convolution(srcArray, maskArray)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first array of convolution.</td></tr><tr><td>two-dimensional array</td><td>maskArray</td><td>The second array of convolution.</td></tr></table>
+
+<hr>
+<h3>gridjs.conv</h3>
+<p>An alias of <code>gridjs.convolution</code>.</p><hr>
+<h3>gridjs.abs</h3>
+<p>Return a new two-dimensional array contains absolute values of the given two-dimensional array.</p><pre><code>two-dimensional array gridjs.abs(srcArray)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to calculate absolute values with.</td></tr></table>
+
+<hr>
+<h3>gridjs.square</h3>
+<p>Return a new two-dimensional array contains square values of the given two-dimensional array.</p><pre><code>two-dimensional array gridjs.square(srcArray)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to calculate square values with.</td></tr></table>
+
+<hr>
+<h3>gridjs.sqrt</h3>
+<p>Return a new two-dimensional array contains square root values of the given two-dimensional array.</p><pre><code>two-dimensional array gridjs.sqrt(srcArray)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to calculate square root values with.</td></tr></table>
+
+<hr>
+<h3>gridjs.gaussCore</h3>
+<p>Return a two-dimensional array of Gauss core with the given size and sigma.</p><pre><code>two-dimensional array gridjs.gaussCore(size, sigma, derivative)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>size</td><td>The size of the Gauss core.</td></tr><tr><td>number</td><td><br>(optional) sigma</td><td>Sigma for calculating Gauss core, default value is 1.</td></tr><tr><td>number</td><td><br>(optional) derivative</td><td>0 for the first derivative Gx, 1 for the first derivative Gy, 2 for the second derivative Gxy.</td></tr></table>
+
+<hr>
+<h3>gridjs.gauss</h3>
+<p>Return a new two-dimensional array with gauss filter.</p><pre><code>two-dimensional array gridjs.gaussCore(size, sigma, derivative)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to calculate Gauss filter with.</td></tr><tr><td>number</td><td>size</td><td>The size of the Gauss core.</td></tr><tr><td>number</td><td><br>(optional) sigma</td><td>Sigma for calculating Gauss core, default value is 1.</td></tr><tr><td>number</td><td><br>(optional) derivative</td><td>0 for the first derivative Gx, 1 for the first derivative Gy, 2 for the second derivative Gxy.</td></tr></table>
+
+<hr>
+<h3>gridjs.add</h3>
+<p>Return a new two-dimensional array contains sum values of the given two two-dimensional arrays.</p><pre><code>two-dimensional array gridjs.add(srcArray, dstArray)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first two-dimensional array to calculate with.</td></tr><tr><td>two-dimensional array</td><td>dstArray</td><td>The second two-dimensional array to calculate with.</td></tr></table>
+
+<hr>
+<h3>gridjs.minus</h3>
+<p>Calculate srcArray minus dstArray and return a new two-dimensional array with the result.</p><pre><code>two-dimensional array gridjs.minus(srcArray, dstArray)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first two-dimensional array to calculate with.</td></tr><tr><td>two-dimensional array</td><td>dstArray</td><td>The second two-dimensional array to calculate with.</td></tr></table>
+
+
+<hr>
+<h3>gridjs.multiply</h3>
+<p>Calculate every value of srcArray multiply the same position value of dstArray and return a new two-dimensional array with the result.</p><p>If dstArray is a number, then calculate every value of srcArray multipy dstArray.</p><p>Notice: this method is not a tradition definition of matrix multiply.</p><pre><code>two-dimensional array gridjs.multiply(srcArray, dstArray)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first two-dimensional array to calculate with.</td></tr><tr><td>two-dimensional array or number</td><td>dstArray</td><td>The second two-dimensional array or number to calculate with.</td></tr></table>
+
+<hr>
+<h3>gridjs.divide</h3>
+<p>Calculate every value of srcArray divide by the same position value of dstArray and return a new two-dimensional array with the result.</p><p>If dstArray is a number, then calculate every value of srcArray divide by dstArray.</p><p>Notice: this method is not a tradition definition of matrix divide.</p><pre><code>two-dimensional array gridjs.divide(srcArray, dstArray)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first two-dimensional array to calculate with.</td></tr><tr><td>two-dimensional array or number</td><td>dstArray</td><td>The second two-dimensional array or number to calculate with.</td></tr></table>
+
+<hr>
+<h3>gridjs.zeros</h3>
+<p>Return a new two-dimensional array contains only zeros with the given size.</p><pre><code>two-dimensional array gridjs.zeros(width, height)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number or two-dimensional array</td><td>width</td><td>The width of size. If width is a two-dimensional array, the result has the same size with it.</td></tr><tr><td>number</td><td>height</td><td>The height of size. if width is a two-dimensional array, this parameter will be ignored.</td></tr></table>
+
+<hr>
+<h3>gridjs.ones</h3>
+<p>Return a new two-dimensional array contains only ones with the given size.</p><pre><code>two-dimensional array gridjs.ones(width, height)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number or two-dimensional array</td><td>width</td><td>The width of size. If width is a two-dimensional array, the result has the same size with it.</td></tr><tr><td>number</td><td>height</td><td>The height of size. if width is a two-dimensional array, this parameter will be ignored.</td></tr></table>
+
+<hr>
+<h1>ImageObject</h1>
+<h3>Data Type</h3>
+
+      </section>
+  
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>此文档通过doxmate生成。主题借鉴Bootstrap API文档风格，注解基于<a href="https://github.com/visionmedia/dox">Dox</a>。欢迎关注doxmate作者<a href="http://weibo.com/shyvo" target="_blank">@朴灵</a></p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/visionmedia/dox">Dox主页</a></li>
+            <li><a href="http://html5ify.com/doxmate">Doxmate主页</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate">Doxmate源码</a></li>
+            <li><a href="https://github.com/JacksonTian/doxmate/issues?state=open">提交bug</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+
