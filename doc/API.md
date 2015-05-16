@@ -397,4 +397,16 @@ ImageObject ImageObject.load(left, top, width, height)
 
 ---
 
+### ImageObject.flip
+
+Flip the image object with the give axis. This method modifies origin data.
+
+```
+ImageObject ImageObject.flip(axis)
+```
+
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>axis</td><td>0 means y axis(flip horizontal), 1 means x axis(flip vertical), 2 means x and y axis(same as rotate 180 degrees). If the given axis is none of these options, the image object will not be changed.</td></tr></table>
+
+---
+
 EOF
