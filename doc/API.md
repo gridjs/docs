@@ -355,7 +355,7 @@ Past another image object to the current image object with the given position.
 ImageObject ImageObject.paste(srcImageObject, left, top)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>ImageObject</td><td>srcImageObject</td><td>The image object to paste.</td></tr><tr><td>number</td><td>left</td><td>Left position of the image object to paste.</td></tr><tr><td>number</td><td>top</td><td>Top position of the image object to paste.</td></tr></table>
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>ImageObject</td><td>srcImageObject</td><td>The image object to paste.</td></tr><tr><td>number</td><td>(optional) left</td><td>Left position of the image object to paste, default value is 0.</td></tr><tr><td>number</td><td>(optional) top</td><td>Top position of the image object to paste, default value is 0.</td></tr></table>
 
 ---
 
