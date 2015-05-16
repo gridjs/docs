@@ -266,6 +266,12 @@
     </a>
   </li>
 
+  <li class="level_3">
+    <a href="#index_ImageObject.flip" title="ImageObject.flip">
+      <i class="icon-chevron-right"></i>ImageObject.flip
+    </a>
+  </li>
+
 </ul>
 
     </div>
@@ -423,6 +429,11 @@
 <h3>ImageObject.load</h3>
 <p>Create a new dynamic crop image object of the current image object.</p><p>You should always call <code>ImageObject.update</code> method after edit a dynamic crop image object to make changes effective on the origin image object.</p><pre><code>ImageObject ImageObject.load(left, top, width, height)
 </code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>left</td><td>Left position of the image object to load.</td></tr><tr><td>number</td><td>top</td><td>Top position of the image object to load.</td></tr><tr><td>number</td><td>width</td><td>Width of the size to load.</td></tr><tr><td>number</td><td>height</td><td>Height of the size to load.</td></tr></table>
+
+<hr>
+<h3>ImageObject.flip</h3>
+<p>Flip the image object with the give axis. This method modifies origin data.</p><pre><code>ImageObject ImageObject.flip(axis)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>axis</td><td>0 means y axis(flip horizontal), 1 means x axis(flip vertical), 2 means x and y axis(same as rotate 180 degrees). If the given axis is none of these options, the image object will not be changed.</td></tr></table>
 
 <hr>
 <p>EOF</p>
