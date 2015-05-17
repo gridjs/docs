@@ -42,6 +42,12 @@ two-dimensional array gridjs.convolution(srcArray, maskArray)
 
 ---
 
+### gridjs.div
+
+An alias of `gridjs.divide`.
+
+---
+
 ### gridjs.divide
 
 Calculate every value of srcArray divide by the same position value of dstArray and return a new two-dimensional array with the result.
@@ -139,6 +145,12 @@ two-dimensional array gridjs.minus(srcArray, dstArray)
 ```
 
 <table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first two-dimensional array to calculate with.</td></tr><tr><td>two-dimensional array</td><td>dstArray</td><td>The second two-dimensional array to calculate with.</td></tr></table>
+
+---
+
+### gridjs.mul
+
+An alias of `gridjs.multiply`.
 
 ---
 
