@@ -380,6 +380,16 @@ ImageObject ImageObject.resize(newWidth, newHeight)
 
 ---
 
+### ImageObject.reverse
+
+Reverse colors of the image object.
+
+```
+ImageObject ImageObject.reverse()
+```
+
+---
+
 ### ImageObject.rotate
 
 Rotate the image object counterclockwise with the given degree. This method modifies origin data.
