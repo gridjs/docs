@@ -430,7 +430,7 @@ ImageObject ImageObject.show(canvas)
 
 ### ImageObject.update
 
-A alias of `ImageObject.updateImageData`.
+An alias of `ImageObject.updateImageData`.
 
 ---
 
