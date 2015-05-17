@@ -81,6 +81,12 @@
   </li>
 
   <li class="level_3">
+    <a href="#index_gridjs.cutoff" title="gridjs.cutoff">
+      <i class="icon-chevron-right"></i>gridjs.cutoff
+    </a>
+  </li>
+
+  <li class="level_3">
     <a href="#index_gridjs.div" title="gridjs.div">
       <i class="icon-chevron-right"></i>gridjs.div
     </a>
@@ -325,6 +331,11 @@
 </code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first array of convolution.</td></tr><tr><td>two-dimensional array</td><td>maskArray</td><td>The second array of convolution.</td></tr></table>
 
 <hr>
+<h3>gridjs.cutoff</h3>
+<p>Cut off values of the two-dimensional array with the given max value, values larger then the given max value will be set to the max value. This method modifis origin data.</p><pre><code>two-dimensional array gridjs.cutoff(srcArray, max)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to cut off.</td></tr><tr><td>number</td><td>max</td><td>Max value to cut off srcArray with.</td></tr></table>
+
+<hr>
 <h3>gridjs.div</h3>
 <p>An alias of <code>gridjs.divide</code>.</p><hr>
 <h3>gridjs.divide</h3>
@@ -382,8 +393,8 @@
 
 <hr>
 <h3>gridjs.ones</h3>
-<p>Return a new two-dimensional array contains only ones with the given size.</p><pre><code>two-dimensional array gridjs.ones(width, height)
-</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number or two-dimensional array</td><td>width</td><td>Width of size. If width is a two-dimensional array, the result has the same size with it.</td></tr><tr><td>number</td><td>height</td><td>Height of size. if width is a two-dimensional array, this parameter will be ignored.</td></tr></table>
+<p>Return a new two-dimensional array contains only ones with the given size.</p><pre><code>two-dimensional array gridjs.ones(width, height, value)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number or two-dimensional array</td><td>width</td><td>Width of size. If width is a two-dimensional array, the result has the same size with it.</td></tr><tr><td>number</td><td>height</td><td>Height of size. if width is a two-dimensional array, this parameter will be ignored.</td></tr><tr><td>number</td><td>(optional) value</td><td>The value the two-dimensional array contains, default value is 1.</td></tr></table>
 
 <hr>
 <h3>gridjs.open</h3>

@@ -42,6 +42,18 @@ two-dimensional array gridjs.convolution(srcArray, maskArray)
 
 ---
 
+### gridjs.cutoff
+
+Cut off values of the two-dimensional array with the given max value, values larger then the given max value will be set to the max value. This method modifis origin data.
+
+```
+two-dimensional array gridjs.cutoff(srcArray, max)
+```
+
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to cut off.</td></tr><tr><td>number</td><td>max</td><td>Max value to cut off srcArray with.</td></tr></table>
+
+---
+
 ### gridjs.div
 
 An alias of `gridjs.divide`.
@@ -193,10 +205,10 @@ two-dimensional array gridjs.normalize(srcArray, min, max)
 Return a new two-dimensional array contains only ones with the given size.
 
 ```
-two-dimensional array gridjs.ones(width, height)
+two-dimensional array gridjs.ones(width, height, value)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number or two-dimensional array</td><td>width</td><td>Width of size. If width is a two-dimensional array, the result has the same size with it.</td></tr><tr><td>number</td><td>height</td><td>Height of size. if width is a two-dimensional array, this parameter will be ignored.</td></tr></table>
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number or two-dimensional array</td><td>width</td><td>Width of size. If width is a two-dimensional array, the result has the same size with it.</td></tr><tr><td>number</td><td>height</td><td>Height of size. if width is a two-dimensional array, this parameter will be ignored.</td></tr><tr><td>number</td><td>(optional) value</td><td>The value the two-dimensional array contains, default value is 1.</td></tr></table>
 
 ---
 
