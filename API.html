@@ -267,6 +267,12 @@
   </li>
 
   <li class="level_3">
+    <a href="#index_ImageObject.plot" title="ImageObject.plot">
+      <i class="icon-chevron-right"></i>ImageObject.plot
+    </a>
+  </li>
+
+  <li class="level_3">
     <a href="#index_ImageObject.resize" title="ImageObject.resize">
       <i class="icon-chevron-right"></i>ImageObject.resize
     </a>
@@ -468,6 +474,11 @@
 <h3>ImageObject.paste</h3>
 <p>Past another image object to the current image object with the given position.</p><pre><code>ImageObject ImageObject.paste(srcImageObject, left, top)
 </code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>ImageObject</td><td>srcImageObject</td><td>The image object to paste.</td></tr><tr><td>number</td><td>(optional) left</td><td>Left position of the image object to paste, default value is 0.</td></tr><tr><td>number</td><td>(optional) top</td><td>Top position of the image object to paste, default value is 0.</td></tr></table>
+
+<hr>
+<h3>ImageObject.plot</h3>
+<p>Draw dots and lines on an image object. This method modifies origin data.</p><pre><code>ImageObject ImageObject.plot(points, style)
+</code></pre><table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>array or array of array</td><td>points</td><td>If this parameter is array, it should contain two values, x and y. If this parameter is array of array, it should contain arrays that contain two values, x and y. For example, [x, y] or [[x0, y0], [x1, y1], ...]. You may also call this method with three parameters: x, y and style. For example ImageObject.plot(10, 100, &#39;ro&#39;).</td></tr><tr><td>string</td><td>(optional) style</td><td>Style contains three commands to define color, dot style and line style. Colors: &#39;b&#39; for blue, &#39;g&#39; for green, &#39;r&#39; for red, &#39;c&#39; for cyan, &#39;m&#39; for magenta, &#39;y&#39; for yellow, &#39;k&#39; for black and &#39;w&#39; for white. Dot styles: &#39;.&#39; for dot, &#39;o&#39; for circle, &#39;s&#39; for square, &#39;<em>&#39; for star, &#39;+&#39; for plus and &#39;x&#39; for cross. Line styles: &#39;-&#39; for dashed, &#39;--&#39; for solid, &#39;:&#39; for dotted. For example, &#39;go-&#39; means green dashed lines with circle symbols, &#39;r</em>&#39; means red symbols. The default style is blue solid lines without symbols.</td></tr></table>
 
 <hr>
 <h3>ImageObject.resize</h3>
