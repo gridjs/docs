@@ -11,6 +11,11 @@ h3 code {
   font-weight: normal;
 }
 
+code {
+  color: #333;
+  background-color: #f7f7f7;
+}
+
 /* Tweak navbar brand link to be super sleek
 -------------------------------------------------- */
 

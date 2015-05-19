@@ -413,6 +413,16 @@ ImageObject ImageObject.flip(axis)
 
 ---
 
+### ImageObject.flush
+
+Update image object with workplace data immediately. You should only call this method after `ImageObject.hold`.
+
+```
+ImageObject ImageObject.flush()
+```
+
+---
+
 ### ImageObject.grayBlank
 
 Create a new grayscale blank image object with the given size.
@@ -434,6 +444,16 @@ Convert an image object to grayscale. This method modifies origin data.
 
 ```
 ImageObject ImageObject.grayscale()
+```
+
+---
+
+### ImageObject.hold
+
+Do not update image object form workplace data until `ImageObject.flush` is called. This method is only avaliable for `ImageObject.plot`. If you have many dots or lines to draw, and you'd like to do that within a loop, then you should call this method before the loop, and then call `ImageObject.flush` to update the image object.
+
+```
+ImageObject ImageObject.hold()
 ```
 
 ---

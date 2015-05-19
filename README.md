@@ -1,4 +1,4 @@
-Caution! GridJS is under developing, any function may be changed or removed.
+Caution! GridJS is under developing, any method may be changed or removed.
 
 See full API reference list [here](http://gridjs.org/docs/API.html).
 
