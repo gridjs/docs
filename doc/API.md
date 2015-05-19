@@ -402,6 +402,16 @@ ImageObject ImageObject.reverse()
 
 ---
 
+### ImageObject.rgba
+
+Convert an image object to RGBA. This method modifies origin data.
+
+```
+ImageObject ImageObject.rgba()
+```
+
+---
+
 ### ImageObject.rotate
 
 Rotate the image object counterclockwise with the given degree. This method modifies origin data.
