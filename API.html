@@ -243,6 +243,12 @@
   </li>
 
   <li class="level_3">
+    <a href="#index_ImageObject.flush" title="ImageObject.flush">
+      <i class="icon-chevron-right"></i>ImageObject.flush
+    </a>
+  </li>
+
+  <li class="level_3">
     <a href="#index_ImageObject.grayBlank" title="ImageObject.grayBlank">
       <i class="icon-chevron-right"></i>ImageObject.grayBlank
     </a>
@@ -251,6 +257,12 @@
   <li class="level_3">
     <a href="#index_ImageObject.grayscale" title="ImageObject.grayscale">
       <i class="icon-chevron-right"></i>ImageObject.grayscale
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.hold" title="ImageObject.hold">
+      <i class="icon-chevron-right"></i>ImageObject.hold
     </a>
   </li>
 
@@ -969,6 +981,9 @@
 </tbody>
 </table>
 <hr>
+<h3>ImageObject.flush</h3>
+<p>Update image object with workplace data immediately. You should only call this method after <code>ImageObject.hold</code>.</p><pre><code>ImageObject ImageObject.flush()
+</code></pre><hr>
 <h3>ImageObject.grayBlank</h3>
 <p>Create a new grayscale blank image object with the given size.</p><pre><code>ImageObject ImageObject.grayBlank(width, height)
 </code></pre><table>
@@ -995,6 +1010,9 @@
 <hr>
 <h3>ImageObject.grayscale</h3>
 <p>Convert an image object to grayscale. This method modifies origin data.</p><pre><code>ImageObject ImageObject.grayscale()
+</code></pre><hr>
+<h3>ImageObject.hold</h3>
+<p>Do not update image object form workplace data until <code>ImageObject.flush</code> is called. This method is only avaliable for <code>ImageObject.plot</code>. If you have many dots or lines to draw, and you&#39;d like to do that within a loop, then you should call this method before the loop, and then call <code>ImageObject.flush</code> to update the image object.</p><pre><code>ImageObject ImageObject.hold()
 </code></pre><hr>
 <h3>ImageObject.load</h3>
 <p>Create a new dynamic crop image object of the current image object.</p><p>You should always call <code>ImageObject.update</code> method after edit a dynamic crop image object to make changes effective on the origin image object.</p><pre><code>ImageObject ImageObject.load(left, top, width, height)
