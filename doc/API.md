@@ -8,7 +8,9 @@ Return a new two-dimensional array contains absolute values of the given two-dim
 two-dimensional array gridjs.abs(srcArray)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to calculate absolute values with.</td></tr></table>
+| Parameters |  |  |
+|-----------------------|----------|--------------------------------------------------------------|
+| two-dimensional array | srcArray | The two-dimensional array to calculate absolute values with. |
 
 ---
 
@@ -20,7 +22,10 @@ Return a new two-dimensional array contains sum values of the given two two-dime
 two-dimensional array gridjs.add(srcArray, dstArray)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first two-dimensional array to calculate with.</td></tr><tr><td>two-dimensional array</td><td>dstArray</td><td>The second two-dimensional array to calculate with.</td></tr></table>
+| Parameters |  |  |
+|-----------------------|----------|-----------------------------------------------------|
+| two-dimensional array | srcArray | The first two-dimensional array to calculate with. |
+| two-dimensional array | dstArray | The second two-dimensional array to calculate with. |
 
 ---
 
@@ -38,7 +43,10 @@ Calculate convolution of two two-dimensional arrays. The result has the same siz
 two-dimensional array gridjs.convolution(srcArray, maskArray)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first array of convolution.</td></tr><tr><td>two-dimensional array</td><td>maskArray</td><td>The second array of convolution.</td></tr></table>
+| Parameters |  |  |
+|-----------------------|-----------|----------------------------------|
+| two-dimensional array | srcArray | The first array of convolution. |
+| two-dimensional array | maskArray | The second array of convolution. |
 
 ---
 
@@ -50,7 +58,10 @@ Cut off values of the two-dimensional array with the given max value, values lar
 two-dimensional array gridjs.cutoff(srcArray, max)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to cut off.</td></tr><tr><td>number</td><td>max</td><td>Max value to cut off srcArray with.</td></tr></table>
+| Parameters |  |  |
+|-----------------------|----------|---------------------------------------|
+| two-dimensional array | srcArray | The two-dimensional array to cut off. |
+| number | max | Max value to cut off srcArray with. |
 
 ---
 
@@ -72,7 +83,11 @@ Notice: this method is not a tradition definition of matrix divide.
 two-dimensional array gridjs.divide(srcArray, dstArray)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first two-dimensional array to calculate with.</td></tr><tr><td>two-dimensional array or number</td><td>dstArray</td><td>The second two-dimensional array or number to calculate with.</td></tr><tr><td>number</td><td>(optional) defaultValue</td><td>If this parameter is set, the quotient will be set to it when denominator is zero.</td></tr></table>
+| Parameters |  |  |
+|---------------------------------|-------------------------|------------------------------------------------------------------------------------|
+| two-dimensional array | srcArray | The first two-dimensional array to calculate with. |
+| two-dimensional array or number | dstArray | The second two-dimensional array or number to calculate with. |
+| number | (optional) defaultValue | If this parameter is set, the quotient will be set to it when denominator is zero. |
 
 ---
 
@@ -84,7 +99,12 @@ Return a new two-dimensional array with gauss filter.
 two-dimensional array gridjs.gaussCore(srcArray, size, sigma, derivative)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to calculate Gauss filter with.</td></tr><tr><td>number</td><td>size</td><td>Size of the Gauss core.</td></tr><tr><td>number</td><td><br>(optional) sigma</td><td>Sigma for calculating Gauss core, default value is 1.</td></tr><tr><td>number</td><td><br>(optional) derivative</td><td>0 for the first derivative Gx, 1 for the first derivative Gy, 2 for the second derivative Gxy.</td></tr></table>
+| Parameters |  |  |
+|-----------------------|-----------------------|------------------------------------------------------------------------------------------------|
+| two-dimensional array | srcArray | The two-dimensional array to calculate Gauss filter with. |
+| number | size | Size of the Gauss core. |
+| number | (optional) sigma | Sigma for calculating Gauss core, default value is 1. |
+| number | (optional) derivative | 0 for the first derivative Gx, 1 for the first derivative Gy, 2 for the second derivative Gxy. |
 
 ---
 
@@ -96,7 +116,11 @@ Return a two-dimensional array of Gauss core with the given size and sigma.
 two-dimensional array gridjs.gaussCore(size, sigma, derivative)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>size</td><td>Size of the Gauss core.</td></tr><tr><td>number</td><td><br>(optional) sigma</td><td>Sigma for calculating Gauss core, default value is 1.</td></tr><tr><td>number</td><td><br>(optional) derivative</td><td>0 for the first derivative Gx, 1 for the first derivative Gy, 2 for the second derivative Gxy.</td></tr></table>
+| Parameters |  |  |
+|------------|-----------------------|------------------------------------------------------------------------------------------------|
+| number | size | Size of the Gauss core. |
+| number | (optional) sigma | Sigma for calculating Gauss core, default value is 1. |
+| number | (optional) derivative | 0 for the first derivative Gx, 1 for the first derivative Gy, 2 for the second derivative Gxy. |
 
 ---
 
@@ -108,7 +132,10 @@ Create an ImageObjet from image URL, imageData or pixel object.
 gridjs.getImageObject(image, callback)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>string or image data or pixel object</td><td>image</td><td>If you specify the image parameter with string, it should be the URL of the image.</td></tr><tr><td>function</td><td>callback</td><td>The callback parameter should be a function that looks like this:<br><br>function(imageObject) {...};</td></tr></table>
+| Parameters |  |  |
+|--------------------------------------|----------|------------------------------------------------------------------------------------------------|
+| string or image data or pixel object | image | If you specify the image parameter with string, it should be the URL of the image. |
+| function | callback | The callback parameter should be a function that looks like this: function(imageObject) {...}; |
 
 ---
 
@@ -120,7 +147,9 @@ Create an ImageObject from image data.
 ImageObject gridjs.getImageObjectFromImageData(imageData)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>image data</td><td>imageData</td><td>Image data of an image for creating ImageObjcet.</td></tr></table>
+| Parameters |  |  |
+|------------|-----------|--------------------------------------------------|
+| image data | imageData | Image data of an image for creating ImageObjcet. |
 
 ---
 
@@ -132,7 +161,9 @@ Create an ImageObject from pixel object.
 ImageObject gridjs.getImageObjectFromPixel(pixel)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>pixel object</td><td>pixel</td><td>Pixel object of an image for creating ImageObjcet.</td></tr></table>
+| Parameters |  |  |
+|--------------|-------|----------------------------------------------------|
+| pixel object | pixel | Pixel object of an image for creating ImageObjcet. |
 
 ---
 
@@ -144,7 +175,10 @@ Create an ImageObjet from image URL.
 gridjs.getImageObjectFromURL(url, callback)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>string</td><td>url</td><td>URL of an image for creating ImageObjcet.</td></tr><tr><td>function</td><td>callback</td><td>The callback parameter should be a function that looks like this:<br><br>function(imageObject) {...};</td></tr></table>
+| Parameters |  |  |
+|------------|----------|------------------------------------------------------------------------------------------------|
+| string | url | URL of an image for creating ImageObjcet. |
+| function | callback | The callback parameter should be a function that looks like this: function(imageObject) {...}; |
 
 ---
 
@@ -156,7 +190,10 @@ Calculate srcArray minus dstArray and return a new two-dimensional array with th
 two-dimensional array gridjs.minus(srcArray, dstArray)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first two-dimensional array to calculate with.</td></tr><tr><td>two-dimensional array</td><td>dstArray</td><td>The second two-dimensional array to calculate with.</td></tr></table>
+| Parameters |  |  |
+|-----------------------|----------|-----------------------------------------------------|
+| two-dimensional array | srcArray | The first two-dimensional array to calculate with. |
+| two-dimensional array | dstArray | The second two-dimensional array to calculate with. |
 
 ---
 
@@ -178,7 +215,10 @@ Notice: this method is not a tradition definition of matrix multiply.
 two-dimensional array gridjs.multiply(srcArray, dstArray)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first two-dimensional array to calculate with.</td></tr><tr><td>two-dimensional array or number</td><td>dstArray</td><td>The second two-dimensional array or number to calculate with.</td></tr></table>
+| Parameters |  |  |
+|---------------------------------|----------|---------------------------------------------------------------|
+| two-dimensional array | srcArray | The first two-dimensional array to calculate with. |
+| two-dimensional array or number | dstArray | The second two-dimensional array or number to calculate with. |
 
 ---
 
@@ -196,7 +236,11 @@ Normalize values in the two-dimensional array between the given min and max valu
 two-dimensional array gridjs.normalize(srcArray, min, max)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to normalize.</td></tr><tr><td>number</td><td>(optional) min</td><td>Min value to normalize with, default value is 0.</td></tr><tr><td>number</td><td>(optional) max</td><td>Max value to normalize with, default value is 1.</td></tr></table>
+| Parameters |  |  |
+|-----------------------|----------------|--------------------------------------------------|
+| two-dimensional array | srcArray | The two-dimensional array to normalize. |
+| number | (optional) min | Min value to normalize with, default value is 0. |
+| number | (optional) max | Max value to normalize with, default value is 1. |
 
 ---
 
@@ -208,7 +252,11 @@ Return a new two-dimensional array contains only ones with the given size.
 two-dimensional array gridjs.ones(width, height, value)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number or two-dimensional array</td><td>width</td><td>Width of size. If width is a two-dimensional array, the result has the same size with it.</td></tr><tr><td>number</td><td>height</td><td>Height of size. if width is a two-dimensional array, this parameter will be ignored.</td></tr><tr><td>number</td><td>(optional) value</td><td>The value the two-dimensional array contains, default value is 1.</td></tr></table>
+| Parameters |  |  |
+|---------------------------------|------------------|-------------------------------------------------------------------------------------------|
+| number or two-dimensional array | width | Width of size. If width is a two-dimensional array, the result has the same size with it. |
+| number | height | Height of size. if width is a two-dimensional array, this parameter will be ignored. |
+| number | (optional) value | The value the two-dimensional array contains, default value is 1. |
 
 ---
 
@@ -226,7 +274,9 @@ Return a new two-dimensional array contains square root values of the given two-
 two-dimensional array gridjs.sqrt(srcArray)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to calculate square root values with.</td></tr></table>
+| Parameters |  |  |
+|-----------------------|----------|-----------------------------------------------------------------|
+| two-dimensional array | srcArray | The two-dimensional array to calculate square root values with. |
 
 ---
 
@@ -238,7 +288,9 @@ Return a new two-dimensional array contains square values of the given two-dimen
 two-dimensional array gridjs.square(srcArray)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The two-dimensional array to calculate square values with.</td></tr></table>
+| Parameters |  |  |
+|-----------------------|----------|------------------------------------------------------------|
+| two-dimensional array | srcArray | The two-dimensional array to calculate square values with. |
 
 ---
 
@@ -250,7 +302,10 @@ Return a new two-dimensional array contains only zeros with the given size.
 two-dimensional array gridjs.zeros(width, height)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number or two-dimensional array</td><td>width</td><td>Width of size. If width is a two-dimensional array, the result has the same size with it.</td></tr><tr><td>number</td><td>height</td><td>Height of size. if width is a two-dimensional array, this parameter will be ignored.</td></tr></table>
+| Parameters |  |  |
+|---------------------------------|--------|-------------------------------------------------------------------------------------------|
+| number or two-dimensional array | width | Width of size. If width is a two-dimensional array, the result has the same size with it. |
+| number | height | Height of size. if width is a two-dimensional array, this parameter will be ignored. |
 
 ---
 
@@ -258,13 +313,27 @@ two-dimensional array gridjs.zeros(width, height)
 
 ### Data Type
 
-<table class="table table-striped"><tr><th>Attributes</th><th></th><th></th></tr><tr><td>number</td><td>width</td><td>Width of the image.</td></tr><tr><td>number</td><td>height</td><td>Height of the image.</td></tr><tr><td>image data</td><td>imageData</td><td>Image data of the image. See https://developer.mozilla.org/en-US/docs/Web/API/ImageData.</td></tr><tr><td>pixel object</td><td>pixel</td><td>Pixel object of the image.</td></tr><tr><td>ImageObject</td><td>origin</td><td>The origin image object of the current image object. This parameter is only available when current image object is created from ImageObject.load method.</td></tr><tr><td>number</td><td>originLeft</td><td>Left position of the origin image. This parameter is only available when current image object is created from ImageObject.load method.</td></tr><tr><td>number</td><td>originTop</td><td>Top position of the origin image. This parameter is only available when current image object is created from ImageObject.load method.</td></tr></table>
+| Attributes |  |  |
+|--------------|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| number | width | Width of the image. |
+| number | height | Height of the image. |
+| image data | imageData | Image data of the image. See <https://developer.mozilla.org/en-US/docs/Web/API/ImageData>. |
+| pixel object | pixel | Pixel object of the image. |
+| ImageObject | origin | The origin image object of the current image object. This parameter is only available when current image object is created from ImageObject.load method. |
+| number | originLeft | Left position of the origin image. This parameter is only available when current image object is created from ImageObject.load method. |
+| number | originTop | Top position of the origin image. This parameter is only available when current image object is created from ImageObject.load method. |
 
 ---
 
 ### Pixel Object
 
-<table class="table table-striped"><tr><th>Attributes</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>r</td><td>Red channel of the image. Values are between 0 and 255.</td></tr><tr><td>two-dimensional array</td><td>g</td><td>Green channel of the image. Values are between 0 and 255.</td></tr><tr><td>two-dimensional array</td><td>b</td><td>Blue channel of the image. Values are between 0 and 255.</td></tr><tr><td>two-dimensional array</td><td>a</td><td>alpha channel of the image. Values are between 0 and 1.</td></tr><tr><td>two-dimensional array</td><td>G</td><td>luminance of the image. Values are between 0 and 255. This attribute is only available when the image object is converted to grayscale. If the image is grayscale, r, g and b will point to G, that is to say, if you change a pixel in G, channel r, g and b will be changed as well. You should only edit G channel in a grayscale image object.</td></tr></table>
+| Attributes |  |  |
+|-----------------------|---|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| two-dimensional array | r | Red channel of the image. Values are between 0 and 255. |
+| two-dimensional array | g | Green channel of the image. Values are between 0 and 255. |
+| two-dimensional array | b | Blue channel of the image. Values are between 0 and 255. |
+| two-dimensional array | a | alpha channel of the image. Values are between 0 and 1. |
+| two-dimensional array | G | luminance of the image. Values are between 0 and 255. This attribute is only available when the image object is converted to grayscale. If the image is grayscale, r, g and b will point to G, that is to say, if you change a pixel in G, channel r, g and b will be changed as well. You should only edit G channel in a grayscale image object. |
 
 ---
 
@@ -276,7 +345,10 @@ Create a new blank image object with the given size.
 ImageObject ImageObject.blank(width, height)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>width</td><td>Width of the blank image object.</td></tr><tr><td>number</td><td>height</td><td>Height of the blank image object.</td></tr></table>
+| Parameters |  |  |
+|------------|--------|-----------------------------------|
+| number | width | Width of the blank image object. |
+| number | height | Height of the blank image object. |
 
 ---
 
@@ -290,7 +362,11 @@ The current image object will be blended with the given image object. If you'd l
 ImageObject ImageObject.blend(srcImageObject, offsetX, offsetY)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>ImageObject</td><td>srcImageObject</td><td>The image object to blend on the current image object.</td></tr><tr><td>number</td><td>offsetX</td><td>The x offset of srcImageObject on the current image object.</td></tr><tr><td>number</td><td>offsetY</td><td>The y offset of srcImageObject on the current image object.</td></tr></table>
+| Parameters |  |  |
+|-------------|----------------|-------------------------------------------------------------|
+| ImageObject | srcImageObject | The image object to blend on the current image object. |
+| number | offsetX | The x offset of srcImageObject on the current image object. |
+| number | offsetY | The y offset of srcImageObject on the current image object. |
 
 ---
 
@@ -314,7 +390,12 @@ If you'd like to create a dynamic crop of the image object(changes on the crop i
 ImageObject ImageObject.crop(left, top, cropWidth, cropHeight)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>left</td><td>Left position of the image object to crop.</td></tr><tr><td>number</td><td>top</td><td>Top position of the image object to crop.</td></tr><tr><td>number</td><td>cropWidth</td><td>Width of the size to crop.</td></tr><tr><td>number</td><td>cropHeight</td><td>Height of the size to crop.</td></tr></table>
+| Parameters |  |  |
+|------------|------------|--------------------------------------------|
+| number | left | Left position of the image object to crop. |
+| number | top | Top position of the image object to crop. |
+| number | cropWidth | Width of the size to crop. |
+| number | cropHeight | Height of the size to crop. |
 
 ---
 
@@ -326,7 +407,9 @@ Flip the image object with the given axis. This method modifies origin data.
 ImageObject ImageObject.flip(axis)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>axis</td><td>0 means y axis(flip horizontal), 1 means x axis(flip vertical), 2 means x and y axis(same as rotate 180 degrees). If the given axis is none of these options, the image object will not be changed.</td></tr></table>
+| Parameters |  |  |
+|------------|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| number | axis | 0 means y axis(flip horizontal), 1 means x axis(flip vertical), 2 means x and y axis(same as rotate 180 degrees). If the given axis is none of these options, the image object will not be changed. |
 
 ---
 
@@ -338,7 +421,10 @@ Create a new grayscale blank image object with the given size.
 ImageObject ImageObject.grayBlank(width, height)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>width</td><td>Width of the grayscale blank image object.</td></tr><tr><td>number</td><td>height</td><td>Height of the grayscale blank image object.</td></tr></table>
+| Parameters |  |  |
+|------------|--------|---------------------------------------------|
+| number | width | Width of the grayscale blank image object. |
+| number | height | Height of the grayscale blank image object. |
 
 ---
 
@@ -362,7 +448,12 @@ You should always call `ImageObject.update` method after edit a dynamic crop ima
 ImageObject ImageObject.load(left, top, width, height)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>left</td><td>Left position of the image object to load.</td></tr><tr><td>number</td><td>top</td><td>Top position of the image object to load.</td></tr><tr><td>number</td><td>width</td><td>Width of the size to load.</td></tr><tr><td>number</td><td>height</td><td>Height of the size to load.</td></tr></table>
+| Parameters |  |  |
+|------------|--------|--------------------------------------------|
+| number | left | Left position of the image object to load. |
+| number | top | Top position of the image object to load. |
+| number | width | Width of the size to load. |
+| number | height | Height of the size to load. |
 
 ---
 
@@ -374,7 +465,11 @@ Past another image object to the current image object with the given position.
 ImageObject ImageObject.paste(srcImageObject, left, top)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>ImageObject</td><td>srcImageObject</td><td>The image object to paste.</td></tr><tr><td>number</td><td>(optional) left</td><td>Left position of the image object to paste, default value is 0.</td></tr><tr><td>number</td><td>(optional) top</td><td>Top position of the image object to paste, default value is 0.</td></tr></table>
+| Parameters |  |  |
+|-------------|-----------------|-----------------------------------------------------------------|
+| ImageObject | srcImageObject | The image object to paste. |
+| number | (optional) left | Left position of the image object to paste, default value is 0. |
+| number | (optional) top | Top position of the image object to paste, default value is 0. |
 
 ---
 
@@ -386,7 +481,10 @@ Draw dots and lines on an image object. This method modifies origin data.
 ImageObject ImageObject.plot(points, style)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>array or array of array</td><td>points</td><td>If this parameter is array, it should contain two values, x and y. If this parameter is array of array, it should contain arrays that contain two values, x and y. For example, [x, y] or [[x0, y0], [x1, y1], ...]. You may also call this method with three parameters: x, y and style. For example ImageObject.plot(10, 100, 'ro').</td></tr><tr><td>string</td><td>(optional) style</td><td>Style contains three commands to define color, dot style and line style. Colors: 'b' for blue, 'g' for green, 'r' for red, 'c' for cyan, 'm' for magenta, 'y' for yellow, 'k' for black and 'w' for white. Dot styles: '.' for dot, 'o' for circle, 's' for square, '*' for star, '+' for plus and 'x' for cross. Line styles: '-' for dashed, '--' for solid, ':' for dotted. For example, 'go-' means green dashed lines with circle symbols, 'r*' means red symbols. The default style is blue solid lines without symbols.</td></tr></table>
+| Parameters |  |  |
+|-------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| array or array of array | points | If this parameter is array, it should contain two values, x and y. If this parameter is array of array, it should contain arrays that contain two values, x and y. For example, [x, y] or [[x0, y0], [x1, y1], ...]. You may also call this method with three parameters: x, y and style. For example, ImageObject.plot(10, 100, 'ro'). |
+| string | (optional) style | Style contains three commands to define color, dot style and line style. Colors: 'b' for blue, 'g' for green, 'r' for red, 'c' for cyan, 'm' for magenta, 'y' for yellow, 'k' for black and 'w' for white. Dot styles: '.' for dot, 'o' for circle, 's' for square, '\*' for star, '+' for plus and 'x' for cross. Line styles: '-' for dashed, '--' for solid, ':' for dotted. For example, 'go-' means green dashed lines with circle symbols, 'r\*' means red star symbols. The default style is blue solid lines without symbols. |
 
 ---
 
@@ -400,7 +498,10 @@ The image object will be stretched with the given size. If you'd like to crop an
 ImageObject ImageObject.resize(newWidth, newHeight)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>newWidth</td><td>New width of the image object.</td></tr><tr><td>number</td><td>newHeight</td><td>New height of the image object.</td></tr></table>
+| Parameters |  |  |
+|------------|-----------|---------------------------------|
+| number | newWidth | New width of the image object. |
+| number | newHeight | New height of the image object. |
 
 ---
 
@@ -434,7 +535,9 @@ Notice: this method probably change the size of image data. For exmaple, if the 
 ImageObject ImageObject.rotate(degree)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>number</td><td>degree</td><td>Degree to rotate the image object with.</td></tr></table>
+| Parameters |  |  |
+|------------|--------|-----------------------------------------|
+| number | degree | Degree to rotate the image object with. |
 
 ---
 
@@ -446,7 +549,9 @@ Show the image object on the given canvas element.
 ImageObject ImageObject.show(canvas)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>canvas element</td><td>canvas</td><td>The canvas on which to show the image object.</td></tr></table>
+| Parameters |  |  |
+|----------------|--------|-----------------------------------------------|
+| canvas element | canvas | The canvas on which to show the image object. |
 
 ---
 
