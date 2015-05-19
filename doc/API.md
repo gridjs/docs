@@ -378,6 +378,18 @@ ImageObject ImageObject.paste(srcImageObject, left, top)
 
 ---
 
+### ImageObject.plot
+
+Draw dots and lines on an image object. This method modifies origin data.
+
+```
+ImageObject ImageObject.plot(points, style)
+```
+
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>array or array of array</td><td>points</td><td>If this parameter is array, it should contain two values, x and y. If this parameter is array of array, it should contain arrays that contain two values, x and y. For example, [x, y] or [[x0, y0], [x1, y1], ...]. You may also call this method with three parameters: x, y and style. For example ImageObject.plot(10, 100, 'ro').</td></tr><tr><td>string</td><td>(optional) style</td><td>Style contains three commands to define color, dot style and line style. Colors: 'b' for blue, 'g' for green, 'r' for red, 'c' for cyan, 'm' for magenta, 'y' for yellow, 'k' for black and 'w' for white. Dot styles: '.' for dot, 'o' for circle, 's' for square, '*' for star, '+' for plus and 'x' for cross. Line styles: '-' for dashed, '--' for solid, ':' for dotted. For example, 'go-' means green dashed lines with circle symbols, 'r*' means red symbols. The default style is blue solid lines without symbols.</td></tr></table>
+
+---
+
 ### ImageObject.resize
 
 Resize the current image object. This method modifies origin data.
