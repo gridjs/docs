@@ -72,7 +72,7 @@ Notice: this method is not a tradition definition of matrix divide.
 two-dimensional array gridjs.divide(srcArray, dstArray)
 ```
 
-<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first two-dimensional array to calculate with.</td></tr><tr><td>two-dimensional array or number</td><td>dstArray</td><td>The second two-dimensional array or number to calculate with.</td></tr></table>
+<table class="table table-striped"><tr><th>Parameters</th><th></th><th></th></tr><tr><td>two-dimensional array</td><td>srcArray</td><td>The first two-dimensional array to calculate with.</td></tr><tr><td>two-dimensional array or number</td><td>dstArray</td><td>The second two-dimensional array or number to calculate with.</td></tr><tr><td>number</td><td>(optional) defaultValue</td><td>If this parameter is set, the quotient will be set to it when denominator is zero.</td></tr></table>
 
 ---
 
