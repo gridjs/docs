@@ -279,6 +279,12 @@
   </li>
 
   <li class="level_3">
+    <a href="#index_ImageObject.rgba" title="ImageObject.rgba">
+      <i class="icon-chevron-right"></i>ImageObject.rgba
+    </a>
+  </li>
+
+  <li class="level_3">
     <a href="#index_ImageObject.rotate" title="ImageObject.rotate">
       <i class="icon-chevron-right"></i>ImageObject.rotate
     </a>
@@ -471,6 +477,9 @@
 <hr>
 <h3>ImageObject.reverse</h3>
 <p>Reverse colors of the image object.</p><pre><code>ImageObject ImageObject.reverse()
+</code></pre><hr>
+<h3>ImageObject.rgba</h3>
+<p>Convert an image object to RGBA. This method modifies origin data.</p><pre><code>ImageObject ImageObject.rgba()
 </code></pre><hr>
 <h3>ImageObject.rotate</h3>
 <p>Rotate the image object counterclockwise with the given degree. This method modifies origin data.</p><p>Notice: this method probably change the size of image data. For exmaple, if the origin image is a square, the width and height will change to 1.414 times after rotating 45 degress.</p><pre><code>ImageObject ImageObject.rotate(degree)
