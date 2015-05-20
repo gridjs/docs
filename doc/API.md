@@ -182,6 +182,27 @@ gridjs.getImageObjectFromURL(url, callback)
 
 ---
 
+### gridjs.kmeans
+
+Calculate k-means clustering.
+
+```
+object gridjs.kmeans(points, k, maxStep)
+```
+
+| Parameters |  |  |
+|----------------------|--------------------|------------------------------------------------------------------------------|
+| point list | points | The point list should be a two-dimensional array like [[x0, y0], [x1, y1], ...]. |
+| number | k | Number of clusters. |
+| number | (optional) maxStep | Max step for calculating, default value is 20. |
+
+| Result |  |  |
+|----------------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| point list | center | Centers of clusters that is a two-dimensional array like [[x0, y0], [x1, y1], ...]. |
+| array of point list | cluster | Center of the *n*th cluster is center[n]. |
+
+---
+
 ### gridjs.minus
 
 Calculate srcArray minus dstArray and return a new two-dimensional array with the result.
