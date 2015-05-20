@@ -29,6 +29,25 @@ two-dimensional array gridjs.add(srcArray, dstArray)
 
 ---
 
+### gridjs.blank
+
+Create a new blank image object with the given size.
+
+```
+ImageObject gridjs.blank(width, height, r, g, b, a)
+```
+
+| Parameters |  |  |
+|------------|--------|-----------------------------------|
+| number | width | Width of the blank image object. |
+| number | height | Height of the blank image object. |
+| number | (optional) r | Value of r channel of background, default value is 0. |
+| number | (optional) g | Value of g channel of background, default value is 0. |
+| number | (optional) b | Value of b channel of background, default value is 0. |
+| number | (optional) a | Value of a channel of background, default value is 0. |
+
+---
+
 ### gridjs.conv
 
 An alias of `gridjs.convolution`.
@@ -358,21 +377,6 @@ two-dimensional array gridjs.zeros(width, height)
 
 ---
 
-### ImageObject.blank
-
-Create a new blank image object with the given size.
-
-```
-ImageObject ImageObject.blank(width, height)
-```
-
-| Parameters |  |  |
-|------------|--------|-----------------------------------|
-| number | width | Width of the blank image object. |
-| number | height | Height of the blank image object. |
-
----
-
 ### ImageObject.blend
 
 Blend two image object. This method modifies origin data.
@@ -441,21 +445,6 @@ Update image object with workplace data immediately. You should only call this m
 ```
 ImageObject ImageObject.flush()
 ```
-
----
-
-### ImageObject.grayBlank
-
-Create a new grayscale blank image object with the given size.
-
-```
-ImageObject ImageObject.grayBlank(width, height)
-```
-
-| Parameters |  |  |
-|------------|--------|---------------------------------------------|
-| number | width | Width of the grayscale blank image object. |
-| number | height | Height of the grayscale blank image object. |
 
 ---
 

@@ -69,6 +69,12 @@
   </li>
 
   <li class="level_3">
+    <a href="#index_gridjs.blank" title="gridjs.blank">
+      <i class="icon-chevron-right"></i>gridjs.blank
+    </a>
+  </li>
+
+  <li class="level_3">
     <a href="#index_gridjs.conv" title="gridjs.conv">
       <i class="icon-chevron-right"></i>gridjs.conv
     </a>
@@ -219,12 +225,6 @@
   </li>
 
   <li class="level_3">
-    <a href="#index_ImageObject.blank" title="ImageObject.blank">
-      <i class="icon-chevron-right"></i>ImageObject.blank
-    </a>
-  </li>
-
-  <li class="level_3">
     <a href="#index_ImageObject.blend" title="ImageObject.blend">
       <i class="icon-chevron-right"></i>ImageObject.blend
     </a>
@@ -251,12 +251,6 @@
   <li class="level_3">
     <a href="#index_ImageObject.flush" title="ImageObject.flush">
       <i class="icon-chevron-right"></i>ImageObject.flush
-    </a>
-  </li>
-
-  <li class="level_3">
-    <a href="#index_ImageObject.grayBlank" title="ImageObject.grayBlank">
-      <i class="icon-chevron-right"></i>ImageObject.grayBlank
     </a>
   </li>
 
@@ -383,6 +377,50 @@
 <td>two-dimensional array</td>
 <td>dstArray</td>
 <td>The second two-dimensional array to calculate with.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>gridjs.blank</h3>
+<p>Create a new blank image object with the given size.</p><pre><code>ImageObject gridjs.blank(width, height, r, g, b, a)
+</code></pre><table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>width</td>
+<td>Width of the blank image object.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>height</td>
+<td>Height of the blank image object.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>(optional) r</td>
+<td>Value of r channel of background, default value is 0.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>(optional) g</td>
+<td>Value of g channel of background, default value is 0.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>(optional) b</td>
+<td>Value of b channel of background, default value is 0.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>(optional) a</td>
+<td>Value of a channel of background, default value is 0.</td>
 </tr>
 </tbody>
 </table>
@@ -928,30 +966,6 @@
 </tbody>
 </table>
 <hr>
-<h3>ImageObject.blank</h3>
-<p>Create a new blank image object with the given size.</p><pre><code>ImageObject ImageObject.blank(width, height)
-</code></pre><table>
-<thead>
-<tr>
-<th>Parameters</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>number</td>
-<td>width</td>
-<td>Width of the blank image object.</td>
-</tr>
-<tr>
-<td>number</td>
-<td>height</td>
-<td>Height of the blank image object.</td>
-</tr>
-</tbody>
-</table>
-<hr>
 <h3>ImageObject.blend</h3>
 <p>Blend two image object. This method modifies origin data.</p><p>The current image object will be blended with the given image object. If you&#39;d like to cover the current image object with another image object, see <code>ImageObject.paste</code>.</p><pre><code>ImageObject ImageObject.blend(srcImageObject, offsetX, offsetY)
 </code></pre><table>
@@ -1040,30 +1054,6 @@
 <h3>ImageObject.flush</h3>
 <p>Update image object with workplace data immediately. You should only call this method after <code>ImageObject.hold</code>.</p><pre><code>ImageObject ImageObject.flush()
 </code></pre><hr>
-<h3>ImageObject.grayBlank</h3>
-<p>Create a new grayscale blank image object with the given size.</p><pre><code>ImageObject ImageObject.grayBlank(width, height)
-</code></pre><table>
-<thead>
-<tr>
-<th>Parameters</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>number</td>
-<td>width</td>
-<td>Width of the grayscale blank image object.</td>
-</tr>
-<tr>
-<td>number</td>
-<td>height</td>
-<td>Height of the grayscale blank image object.</td>
-</tr>
-</tbody>
-</table>
-<hr>
 <h3>ImageObject.grayscale</h3>
 <p>Convert an image object to grayscale. This method modifies origin data.</p><pre><code>ImageObject ImageObject.grayscale()
 </code></pre><hr>
