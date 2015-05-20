@@ -592,7 +592,7 @@ ImageObject ImageObject.show(canvas)
 
 | Parameters |  |  |
 |----------------|--------|-----------------------------------------------|
-| canvas element | canvas | The canvas on which to show the image object. |
+| canvas element or img element | canvas | The canvas on which to show the image object. |
 
 ---
 
