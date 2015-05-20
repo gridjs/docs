@@ -135,6 +135,12 @@
   </li>
 
   <li class="level_3">
+    <a href="#index_gridjs.kmeans" title="gridjs.kmeans">
+      <i class="icon-chevron-right"></i>gridjs.kmeans
+    </a>
+  </li>
+
+  <li class="level_3">
     <a href="#index_gridjs.minus" title="gridjs.minus">
       <i class="icon-chevron-right"></i>gridjs.minus
     </a>
@@ -607,6 +613,56 @@
 <td>function</td>
 <td>callback</td>
 <td>The callback parameter should be a function that looks like this: function(imageObject) {...};</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>gridjs.kmeans</h3>
+<p>Calculate k-means clustering.</p><pre><code>object gridjs.kmeans(points, k, maxStep)
+</code></pre><table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>point list</td>
+<td>points</td>
+<td>The point list should be a two-dimensional array like [[x0, y0], [x1, y1], ...].</td>
+</tr>
+<tr>
+<td>number</td>
+<td>k</td>
+<td>Number of clusters.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>(optional) maxStep</td>
+<td>Max step for calculating, default value is 20.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>point list</td>
+<td>center</td>
+<td>Centers of clusters that is a two-dimensional array like [[x0, y0], [x1, y1], ...].</td>
+</tr>
+<tr>
+<td>array of point list</td>
+<td>cluster</td>
+<td>Center of the <em>n</em>th cluster is center[n].</td>
 </tr>
 </tbody>
 </table>
