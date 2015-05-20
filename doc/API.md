@@ -77,7 +77,7 @@ Calculate every value of srcArray divide by the same position value of dstArray 
 
 If dstArray is a number, then calculate every value of srcArray divide by dstArray.
 
-Notice: this method is not a tradition definition of matrix divide.
+Notice: this method is not a traditional definition of matrix divide.
 
 ```
 two-dimensional array gridjs.divide(srcArray, dstArray)
@@ -209,7 +209,7 @@ Calculate every value of srcArray multiply the same position value of dstArray a
 
 If dstArray is a number, then calculate every value of srcArray multipy dstArray.
 
-Notice: this method is not a tradition definition of matrix multiply.
+Notice: this method is not a traditional definition of matrix multiply.
 
 ```
 two-dimensional array gridjs.multiply(srcArray, dstArray)
@@ -549,7 +549,7 @@ ImageObject ImageObject.rgba()
 
 Rotate the image object counterclockwise with the given degree. This method modifies origin data.
 
-Notice: this method probably change the size of image data. For exmaple, if the origin image is a square, the width and height will change to 1.414 times after rotating 45 degress.
+Notice: this method probably changes the size of image data. For exmaple, if the origin image is a square, the width and height will change to 1.414 times after rotating 45 degress.
 
 ```
 ImageObject ImageObject.rotate(degree)
