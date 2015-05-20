@@ -549,7 +549,7 @@ ImageObject ImageObject.rgba()
 
 Rotate the image object counterclockwise with the given degree. This method modifies origin data.
 
-Notice: this method probably changes the size of image data. For exmaple, if the origin image is a square, the width and height will change to 1.414 times after rotating 45 degress.
+Notice: this method probably changes the size of image data. For exmaple, if the origin image is a square, the width and height will change to 1.414 times after rotating 45 degrees.
 
 ```
 ImageObject ImageObject.rotate(degree)
