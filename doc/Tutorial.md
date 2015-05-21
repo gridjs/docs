@@ -250,11 +250,9 @@ im.update().show(canvas);
 ### Clustering
 
 ```
-var i, x, y, vq,
-    im = gridjs.blank(500, 500, [64, 64, 64, 1]),
-    canvas = document.getElementById('test'),
-    colors = ['c', 'g', 'y', 'r', 'm', 'b'],
-    points = [];
+im = gridjs.blank(500, 500, [64, 64, 64, 1]);
+colors = ['c', 'g', 'y', 'r', 'm', 'b'];
+points = [];
 
 for (i = 0; i < 100; i++) {
   x = Math.round(Math.random() * 100);
