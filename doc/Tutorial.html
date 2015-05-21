@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GridJS Documentation</title>
+    <meta name="keywords" content="GridJS" />
+    <meta name="description" content="A JavaScript Imaging Library" />
+    <script src="assets/prettify.js"></script>
+    <script src="assets/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/base.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">GridJS</a>
+        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="./API.html">API</a>
+            </li>
+          
+            <li>
+              <a href="./Tutorial.html">Tutorial</a>
+            </li>
+          
+          
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>GridJS <small>Version: 0.1.0 By @Sneezry</small></h1>
+        <p class="lead">
+          A JavaScript Imaging Library
+        </p>
+      </div>
+    </header>
+
+<div class="container content">
+  <div class="row">
+  	<div class="col-md-4">
+      <ul class="nav nav-list bs-docs-sidenav affix">
+
+  <li class="level_1">
+    <a href="#index_Get Start" title="Get Start">
+      <i class="icon-chevron-right"></i>Get Start
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_Open An Image" title="Open An Image">
+      <i class="icon-chevron-right"></i>Open An Image
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_Create A Blank Image" title="Create A Blank Image">
+      <i class="icon-chevron-right"></i>Create A Blank Image
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_Process An Image Object" title="Process An Image Object">
+      <i class="icon-chevron-right"></i>Process An Image Object
+    </a>
+  </li>
+
+  <li class="level_1">
+    <a href="#index_Basic Image Processing" title="Basic Image Processing">
+      <i class="icon-chevron-right"></i>Basic Image Processing
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_Resize And Rotate" title="Resize And Rotate">
+      <i class="icon-chevron-right"></i>Resize And Rotate
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_Grayscale" title="Grayscale">
+      <i class="icon-chevron-right"></i>Grayscale
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_Splice Images" title="Splice Images">
+      <i class="icon-chevron-right"></i>Splice Images
+    </a>
+  </li>
+
+  <li class="level_1">
+    <a href="#index_Image Processing With Pixel" title="Image Processing With Pixel">
+      <i class="icon-chevron-right"></i>Image Processing With Pixel
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_Find Image Edges" title="Find Image Edges">
+      <i class="icon-chevron-right"></i>Find Image Edges
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_Modify Image Color" title="Modify Image Color">
+      <i class="icon-chevron-right"></i>Modify Image Color
+    </a>
+  </li>
+
+  <li class="level_1">
+    <a href="#index_Computer Visual" title="Computer Visual">
+      <i class="icon-chevron-right"></i>Computer Visual
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_Corner Detector" title="Corner Detector">
+      <i class="icon-chevron-right"></i>Corner Detector
+    </a>
+  </li>
+
+  <li class="level_1">
+    <a href="#index_Data Analysis" title="Data Analysis">
+      <i class="icon-chevron-right"></i>Data Analysis
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_Clustering" title="Clustering">
+      <i class="icon-chevron-right"></i>Clustering
+    </a>
+  </li>
+
+</ul>
+
+    </div>
+    <div class="col-md-8">
+      <section>
+        <h1>Get Start</h1>
+<p>GridJS is a JavaScript imaging library for web programming, it makes image processing easier in browsers. You can download it from <a href="https://raw.githubusercontent.com/gridjs/gridjs/master/gridjs.js">https://raw.githubusercontent.com/gridjs/gridjs/master/gridjs.js</a>.</p><p>To use GridJS in your code, just create a script element within any web page:</p><pre><code>&lt;script src=&quot;gridjs.js&quot;&gt;&lt;/script&gt;
+</code></pre><h3>Open An Image</h3>
+<p>GridJS provides tree ways to open image, from URL, from image data and from pixel object. To open an image from URL, you can call <code>gridjs.open</code> method:</p><pre><code>gridjs.open(&#39;picture.jpg&#39;, function(im) {
+  // do something with im.
+});
+</code></pre><p>You may notice <code>gridjs.open</code> has a callback function parameter to take the returned image object. We do know most people do not like callbacks, that&#39;s fine, only when you open an image from URL you have to touch callback, otherwise, you won&#39;t find any callback in GridJS any more.</p><p>To open an image from image data, you can call <code>gridjs.getImageObjectFromImageData</code> method:</p><pre><code>content = canvas.getContent(&#39;2d&#39;);
+imageData = content.getImageData(0, 0, width, height);
+im = gridjs.getImageObjectFromImageData(imageData);
+// do something with im.
+</code></pre><p>To open an image from pixel, you can call <code>gridjs.getImageObjectFromPixel</code> method:</p><pre><code>im = gridjs.getImageObjectFromPixel(pixel);
+</code></pre><p><code>pixel</code> in above code is a pixel object, you can learn more at <http://gridjs.org/docs/API.html#index_Pixel Object>.</p><h3>Create A Blank Image</h3>
+<p>You can also create a blank image with <code>gridjs.blank</code> method:</p><pre><code>im = gridjs.blank(500, 400, [255, 255, 255, 1]);
+</code></pre><h3>Process An Image Object</h3>
+<p>Now we have an image object, then we can call all methods belone to <code>ImageObject</code> to process. You can find a full list of <code>ImageObject</code> at <a href="http://gridjs.org/docs/API.html#index_ImageObject">http://gridjs.org/docs/API.html#index_ImageObject</a>.</p><p>An image object has 4 attributes, width, height, imageData and pixel. You should never edit width and height attribute, and to edit imageData is not recommended. And you should always call <code>ImageObject.update</code> after you edit pixel, and call <code>ImageObject.updatePixel</code> after you edit imageData.</p><p>Code below will resize the image object:</p><pre><code>im.resize(200, 100);
+</code></pre><p>Most <code>ImageObject</code> methods modify the origin data, that is to say, for example, after you call <code>ImageObject.resize</code> method, the image object itself will be resized, but not get a copy. If you don&#39;t like to modify the origin data, you can call <code>ImageObject.copy</code> method to create a copy, then modify the copy:</p><pre><code>im2 = im.copy(); // im2 is a copy of im
+im2.resize(200, 100); // im2 is resized to 200 by 100, and im is not modified
+</code></pre><p>All methods of <code>ImageObject</code> return <code>ImageObject</code>, that means you can call methods in one line:</p><pre><code>im2 = im.copy().resize(200, 100);
+</code></pre><p>To show an image object, you can call <code>ImageObject.show</code> method. To use this method, you need assign a canvas element or an img element to place the image:</p><pre><code>canvas = document.getElementsByTagName(&#39;canvas&#39;)[0];
+img = document.getElementsByTagName(&#39;img&#39;)[0];
+
+im.show(canvas);
+im.resize(200, 100);
+im.show(img);
+</code></pre><p>Do you remember we can call methods in only one line? So let&#39;s change code above to this:</p><pre><code>im.show(canvas).resize(200, 100).show(img);
+</code></pre><h1>Basic Image Processing</h1>
+<p>GridJS provides several basic image processing methods, you can call them very comfortably.</p><h3>Resize And Rotate</h3>
+<p>Resize an image to 200 by 100 then rotate it with 90 degree:</p><pre><code>im.resize(200, 100).rotate(90);
+</code></pre><h3>Grayscale</h3>
+<p>Grayscale method converts image to grayscale:</p><pre><code>im.grayscale();
+</code></pre><h3>Splice Images</h3>
+<p>Splice two images:</p><pre><code>im = gridjs.blank(400, 200);
+im.paste(im1, 0, 0).paste(im2, 200, 0);
+</code></pre><p>More methods can be found at <a href="http://gridjs.org/docs/API.html#index_ImageObject">http://gridjs.org/docs/API.html#index_ImageObject</a>.</p><h1>Image Processing With Pixel</h1>
+<p>Basic image processing methods are very limited, so you may need edit pixel to process the image. GridJS provides a pixel object in every image object, so you can edit pixel very easy with GridJS.</p><p>You can learn more about pixel object at <http://gridjs.org/docs/API.html#index_Pixel Object>.</p><h3>Find Image Edges</h3>
+<pre><code>var mask = [
+  [-1, -2, -1],
+  [-2, 12, -2],
+  [-1, -2, -1],
+];
+
+im.grayscale();
+im.pixel.G = gridjs.conv(im.pixel.G, mask);
+im.pixel.G = gridjs.cutoff(im.pixel.G, 255);
+im.update().reverse().show(canvas);
+</code></pre><h3>Modify Image Color</h3>
+<pre><code>var newR, newG, newB;
+
+newR = gridjs.multiply(im.pixel.r, 0.393);
+newR = gridjs.add(newR, gridjs.multiply(im.pixel.g, 0.769));
+newR = gridjs.add(newR, gridjs.multiply(im.pixel.b, 0.189));
+
+newG = gridjs.multiply(im.pixel.r, 0.349);
+newG = gridjs.add(newG, gridjs.multiply(im.pixel.g, 0.686));
+newG = gridjs.add(newG, gridjs.multiply(im.pixel.b, 0.168));
+
+newB = gridjs.multiply(im.pixel.r, 0.272);
+newB = gridjs.add(newB, gridjs.multiply(im.pixel.g, 0.534));
+newB = gridjs.add(newB, gridjs.multiply(im.pixel.b, 0.131));
+
+im.pixel.r = newR;
+im.pixel.g = newG;
+im.pixel.b = newB;
+
+im.update().show(canvas);
+</code></pre><h1>Computer Visual</h1>
+<h3>Corner Detector</h3>
+<pre><code>function harris(srcArray) {
+  var imx, imy, wxx, wyy, wxy, wdet, wtr, H,
+      g = gridjs;
+
+      imx = g.gauss(srcArray, 5, 1, 0);
+      imy = g.gauss(srcArray, 5, 1, 1);
+
+      wxx = g.gauss(g.square(imx), 5);
+      wyy = g.gauss(g.square(imy), 5);
+      wxy = g.gauss(g.mul(imx, imy), 5);
+
+      wdet = g.minus(g.mul(wxx, wyy), g.square(wxy));
+      wtr = g.add(wxx, wyy);
+
+      H = g.div(wdet, wtr, 0);
+
+      g.norm(H);
+
+      return H;
+}
+
+function getHarrisPoint(harrisArray, threshold, minDistance) {
+  var x, y, i, j, distance2,
+      minDistance2 = minDistance * minDistance,
+      index = 0,
+      width = harrisArray[0].length,
+      height = harrisArray.length,
+      points = [];
+
+  for (y = 0; y &lt; height; y++) {
+    for (x = 0; x &lt; width; x++) {
+      if (harrisArray[y][x] &gt;= threshold) {
+        points[index++] = {
+          &#39;x&#39; : x,
+          &#39;y&#39; : y,
+          &#39;h&#39; : harrisArray[y][x]
+        }
+      }
+    }
+  }
+
+  points.sort(function(a, b) {
+    return b.h - a.h;
+  });
+
+  for (i = 0; i &lt; points.length; i++) {
+    for (j = 0; j &lt; i; j++) {
+      distance2 = (points[i].x - points[j].x) * (points[i].x - points[j].x) +
+                  (points[i].y - points[j].y) * (points[i].y - points[j].y);
+
+      if (distance2 &lt; minDistance2) {
+        points.splice(i, 1);
+        i--;
+        break;
+      }
+    }
+  }
+
+  return points;
+}
+
+var H, corners, i;
+
+im.grayscale();
+H = harris(im.pixel.G);
+corners = getHarrisPoint(H, 0.015, 10);
+im.rgba();
+
+for (i = 0; i &lt; corners.length; i++) {
+  im.pixel.r[corners[i].y][corners[i].x] = 255;
+  im.pixel.g[corners[i].y][corners[i].x] = 0;
+  im.pixel.b[corners[i].y][corners[i].x] = 0;
+}
+
+im.update().show(canvas);
+</code></pre><h1>Data Analysis</h1>
+<h3>Clustering</h3>
+<pre><code>var i, x, y, vq,
+    im = gridjs.blank(500, 500, [64, 64, 64, 1]),
+    canvas = document.getElementById(&#39;test&#39;),
+    colors = [&#39;c&#39;, &#39;g&#39;, &#39;y&#39;, &#39;r&#39;, &#39;m&#39;, &#39;b&#39;],
+    points = [];
+
+for (i = 0; i &lt; 100; i++) {
+  x = Math.round(Math.random() * 100);
+  y = Math.round(Math.random() * 100);
+  points[i * 3] = [x + 50, y + 50];
+  points[i * 3 + 1] = [Math.round(Math.random() * 200) + 250, Math.round(Math.random() * 200) + 100];
+  points[i * 3 + 2] = [Math.round(Math.random() * 100) + 100, Math.round(Math.random() * 100) + 300];
+}
+
+vq = gridjs.kmeans(points, 3);
+im.hold();
+for (i = 0; i &lt; vq.cluster.length; i++) {
+  im.plot(vq.cluster[i], colors[i % 6] + &#39;.&#39;);
+}
+im.plot(vq.center, &#39;k*&#39;);
+im.flush().show(canvas);
+</code></pre>
+      </section>
+  
+    </div>
+  </div>
+</div>
+      <footer class="footer">
+        <div class="container">
+          <p class="pull-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>This document is created by <a href="http://html5ify.com/doxmate">Doxmate</a>.</p>
+          <p>Code licensed under <a href="https://github.com/gridjs/gridjs/blob/master/LICENSE">The MIT License</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+      </div>
+    </footer>
+    <script>
+      $(function() {
+        $('pre').addClass('prettyprint');
+        $('td pre').removeClass('prettyprint');
+        prettyPrint();
+        var $window = $(window);
+        var sidenav = $('.bs-docs-sidenav');
+        if (sidenav.height() < window.innerHeight) {
+          sidenav.affix({
+            offset: {
+              top: function () {
+                return $window.width() <= 980 ? 290 : 210
+              },
+              bottom: 200
+            }
+          });
+        } else {
+          sidenav.removeClass('affix');
+        }
+        $(".content").find('h1, h2, h3, h4, h5, h6').each(function () {
+          var node = $(this);
+          // 总是设置id
+          node.attr("id", node.data('id') || "index_" + node.text());
+        });
+
+        $('.bs-docs-sidenav .accordion-marker').on('click', function(event) {
+          var current = $(event.currentTarget);
+          current.find('.glyphicon').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+        });
+      });
+    </script>
+  
+  </body>
+</html>
+
