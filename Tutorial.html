@@ -10,6 +10,7 @@
     <script src="assets/bootstrap/js/bootstrap.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/base.css" />
+    <link rel="shortcut icon" href="assets/gridjs64.png" type="image/png" />
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-static-top top-navbar" role="navigation">
@@ -293,11 +294,9 @@ for (i = 0; i &lt; corners.length; i++) {
 im.update().show(canvas);
 </code></pre><h1>Data Analysis</h1>
 <h3>Clustering</h3>
-<pre><code>var i, x, y, vq,
-    im = gridjs.blank(500, 500, [64, 64, 64, 1]),
-    canvas = document.getElementById(&#39;test&#39;),
-    colors = [&#39;c&#39;, &#39;g&#39;, &#39;y&#39;, &#39;r&#39;, &#39;m&#39;, &#39;b&#39;],
-    points = [];
+<pre><code>im = gridjs.blank(500, 500, [64, 64, 64, 1]);
+colors = [&#39;c&#39;, &#39;g&#39;, &#39;y&#39;, &#39;r&#39;, &#39;m&#39;, &#39;b&#39;];
+points = [];
 
 for (i = 0; i &lt; 100; i++) {
   x = Math.round(Math.random() * 100);
