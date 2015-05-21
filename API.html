@@ -225,8 +225,20 @@
   </li>
 
   <li class="level_3">
+    <a href="#index_ImageObject.arc" title="ImageObject.arc">
+      <i class="icon-chevron-right"></i>ImageObject.arc
+    </a>
+  </li>
+
+  <li class="level_3">
     <a href="#index_ImageObject.blend" title="ImageObject.blend">
       <i class="icon-chevron-right"></i>ImageObject.blend
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.circle" title="ImageObject.circle">
+      <i class="icon-chevron-right"></i>ImageObject.circle
     </a>
   </li>
 
@@ -281,6 +293,30 @@
   <li class="level_3">
     <a href="#index_ImageObject.plot" title="ImageObject.plot">
       <i class="icon-chevron-right"></i>ImageObject.plot
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.poly" title="ImageObject.poly">
+      <i class="icon-chevron-right"></i>ImageObject.poly
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.polygon" title="ImageObject.polygon">
+      <i class="icon-chevron-right"></i>ImageObject.polygon
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.rect" title="ImageObject.rect">
+      <i class="icon-chevron-right"></i>ImageObject.rect
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.rectangle" title="ImageObject.rectangle">
+      <i class="icon-chevron-right"></i>ImageObject.rectangle
     </a>
   </li>
 
@@ -382,7 +418,7 @@
 </table>
 <hr>
 <h3>gridjs.blank</h3>
-<p>Create a new blank image object with the given size.</p><pre><code>ImageObject gridjs.blank(width, height, r, g, b, a)
+<p>Create a new blank image object with the given size.</p><pre><code>ImageObject gridjs.blank(width, height, fill)
 </code></pre><table>
 <thead>
 <tr>
@@ -403,24 +439,9 @@
 <td>Height of the blank image object.</td>
 </tr>
 <tr>
-<td>number</td>
-<td>(optional) r</td>
-<td>Value of r channel of background, default value is 0.</td>
-</tr>
-<tr>
-<td>number</td>
-<td>(optional) g</td>
-<td>Value of g channel of background, default value is 0.</td>
-</tr>
-<tr>
-<td>number</td>
-<td>(optional) b</td>
-<td>Value of b channel of background, default value is 0.</td>
-</tr>
-<tr>
-<td>number</td>
-<td>(optional) a</td>
-<td>Value of a channel of background, default value is 0.</td>
+<td>array</td>
+<td>(optional) fill</td>
+<td>Background fill color with r, g, b and a channel, default value of every channel is 0. For example, [255, 0, 0, 1] means red.</td>
 </tr>
 </tbody>
 </table>
@@ -966,6 +987,55 @@
 </tbody>
 </table>
 <hr>
+<h3>ImageObject.arc</h3>
+<p>Draw an arc on the image object.</p><pre><code>ImageObject ImageObject.arc(centerX, centerY, radius, startDegree, endDegree, fill, stroke)
+</code></pre><table>
+<thead>
+<tr>
+<th>Result</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>centerX</td>
+<td>Left position of center of the arc on the image object.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>centerY</td>
+<td>Top position of center of the arc on the image object.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>radius</td>
+<td>Radius of the arc.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>startDegree</td>
+<td>Start degree of the arc.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>endDegree</td>
+<td>End degree of the arc.</td>
+</tr>
+<tr>
+<td>array</td>
+<td>(optional) fill</td>
+<td>Fill color with r, g, b and a channel, default value of every channel is 0. For example, [255, 0, 0, 1] means red.</td>
+</tr>
+<tr>
+<td>array</td>
+<td>(optional) stroke</td>
+<td>Stoke color with r, g, b and a channel, and line width, default value of every channel and line width is 0. For example, [0, 0, 255, 1, 2] means stroke with 2px width blue lines.</td>
+</tr>
+</tbody>
+</table>
+<hr>
 <h3>ImageObject.blend</h3>
 <p>Blend two image object. This method modifies origin data.</p><p>The current image object will be blended with the given image object. If you&#39;d like to cover the current image object with another image object, see <code>ImageObject.paste</code>.</p><pre><code>ImageObject ImageObject.blend(srcImageObject, offsetX, offsetY)
 </code></pre><table>
@@ -991,6 +1061,45 @@
 <td>number</td>
 <td>offsetY</td>
 <td>The y offset of srcImageObject on the current image object.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>ImageObject.circle</h3>
+<p>Draw a circle on the image object.</p><pre><code>ImageObject ImageObject.circle(centerX, centerY, ra)
+</code></pre><table>
+<thead>
+<tr>
+<th>Result</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>centerX</td>
+<td>Left position of center of the circle on the image object.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>centerY</td>
+<td>Top position of center of the circle on the image object.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>radius</td>
+<td>Radius of the circle.</td>
+</tr>
+<tr>
+<td>array</td>
+<td>(optional) fill</td>
+<td>Fill color with r, g, b and a channel, default value of every channel is 0. For example, [255, 0, 0, 1] means red.</td>
+</tr>
+<tr>
+<td>array</td>
+<td>(optional) stroke</td>
+<td>Stoke color with r, g, b and a channel, and line width, default value of every channel and line width is 0. For example, [0, 0, 255, 1, 2] means stroke with 2px width blue lines.</td>
 </tr>
 </tbody>
 </table>
@@ -1058,7 +1167,7 @@
 <p>Convert an image object to grayscale. This method modifies origin data.</p><pre><code>ImageObject ImageObject.grayscale()
 </code></pre><hr>
 <h3>ImageObject.hold</h3>
-<p>Do not update image object form workplace data until <code>ImageObject.flush</code> is called. This method is only avaliable for <code>ImageObject.plot</code>. If you have many dots or lines to draw, and you&#39;d like to do that within a loop, then you should call this method before the loop, and then call <code>ImageObject.flush</code> to update the image object.</p><pre><code>ImageObject ImageObject.hold()
+<p>Do not update image object form workplace data until <code>ImageObject.flush</code> is called. This method is only avaliable for <code>ImageObject.plot</code>, <code>ImageObject.rect</code>, <code>ImageObject.arc</code>, <code>ImageObject.circle</code> and <code>ImageObject.poly</code>. If you have many geometries to draw, and you&#39;d like to do that within a loop, then you should call this method before the loop, and then call <code>ImageObject.flush</code> to update the image object.</p><pre><code>ImageObject ImageObject.hold()
 </code></pre><hr>
 <h3>ImageObject.load</h3>
 <p>Create a new dynamic crop image object of the current image object.</p><p>You should always call <code>ImageObject.update</code> method after edit a dynamic crop image object to make changes effective on the origin image object.</p><pre><code>ImageObject ImageObject.load(left, top, width, height)
@@ -1143,6 +1252,83 @@
 <td>string</td>
 <td>(optional) style</td>
 <td>Style contains three commands to define color, dot style and line style. Colors: &#39;b&#39; for blue, &#39;g&#39; for green, &#39;r&#39; for red, &#39;c&#39; for cyan, &#39;m&#39; for magenta, &#39;y&#39; for yellow, &#39;k&#39; for black and &#39;w&#39; for white. Dot styles: &#39;.&#39; for dot, &#39;o&#39; for circle, &#39;s&#39; for square, &#39;*&#39; for star, &#39;+&#39; for plus and &#39;x&#39; for cross. Line styles: &#39;-&#39; for dashed, &#39;--&#39; for solid, &#39;:&#39; for dotted. For example, &#39;go-&#39; means green dashed lines with circle symbols, &#39;r*&#39; means red star symbols. The default style is blue solid lines without symbols.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>ImageObject.poly</h3>
+<p>An alias of <code>ImageObject.ploygon</code>.</p><hr>
+<h3>ImageObject.polygon</h3>
+<p>Draw a polygon on the image object.</p><pre><code>ImageObject ImageObject.polygon(points, fill, stroke)
+</code></pre><table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>point list</td>
+<td>points</td>
+<td>The point list should be a two-dimensional array like [[x0, y0], [x1, y1], ...].</td>
+</tr>
+<tr>
+<td>array</td>
+<td>(optional) fill</td>
+<td>Fill color with r, g, b and a channel, default value of every channel is 0. For example, [255, 0, 0, 1] means red.</td>
+</tr>
+<tr>
+<td>array</td>
+<td>(optional) stroke</td>
+<td>Stroke color with r, g, b and a channel, and line width, default value of every channel and line width is 0. For example, [0, 0, 255, 1, 2] means stroke with 2px width blue lines.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>ImageObject.rect</h3>
+<p>An alias of <code>ImageObject.rectangle</code>.</p><hr>
+<h3>ImageObject.rectangle</h3>
+<p>Draw a rectangle on the image object. This method modifies origin data.</p><pre><code>ImageObject ImageObject.rectangle(left, top, width, height, fill, stroke)
+</code></pre><table>
+<thead>
+<tr>
+<th>Result</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>left</td>
+<td>Left position of the rectangle on the image object.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>top</td>
+<td>Top position of the rectangle on the image object.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>width</td>
+<td>Width of the rectangle.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>height</td>
+<td>Height of the rectangle.</td>
+</tr>
+<tr>
+<td>array</td>
+<td>(optional) fill</td>
+<td>Fill color with r, g, b and a channel, default value of every channel is 0. For example, [255, 0, 0, 1] means red.</td>
+</tr>
+<tr>
+<td>array</td>
+<td>(optional) stroke</td>
+<td>Stroke color with r, g, b and a channel, and line width, default value of every channel and line width is 0. For example, [0, 0, 255, 1, 2] means stroke with 2px width blue lines.</td>
 </tr>
 </tbody>
 </table>
