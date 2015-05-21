@@ -34,17 +34,14 @@ two-dimensional array gridjs.add(srcArray, dstArray)
 Create a new blank image object with the given size.
 
 ```
-ImageObject gridjs.blank(width, height, r, g, b, a)
+ImageObject gridjs.blank(width, height, fill)
 ```
 
 | Parameters |  |  |
 |------------|--------|-----------------------------------|
 | number | width | Width of the blank image object. |
 | number | height | Height of the blank image object. |
-| number | (optional) r | Value of r channel of background, default value is 0. |
-| number | (optional) g | Value of g channel of background, default value is 0. |
-| number | (optional) b | Value of b channel of background, default value is 0. |
-| number | (optional) a | Value of a channel of background, default value is 0. |
+| array | (optional) fill | Background fill color with r, g, b and a channel, default value of every channel is 0. For example, [255, 0, 0, 1] means red. |
 
 ---
 
@@ -377,6 +374,26 @@ two-dimensional array gridjs.zeros(width, height)
 
 ---
 
+### ImageObject.arc
+
+Draw an arc on the image object.
+
+```
+ImageObject ImageObject.arc(centerX, centerY, radius, startDegree, endDegree, fill, stroke)
+```
+
+| Result |  |  |
+|--------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| number | centerX | Left position of center of the arc on the image object. |
+| number | centerY | Top position of center of the arc on the image object. |
+| number | radius | Radius of the arc. |
+| number | startDegree | Start degree of the arc. |
+| number | endDegree | End degree of the arc. |
+| array | (optional) fill | Fill color with r, g, b and a channel, default value of every channel is 0. For example, [255, 0, 0, 1] means red. |
+| array | (optional) stroke | Stoke color with r, g, b and a channel, and line width, default value of every channel and line width is 0. For example, [0, 0, 255, 1, 2] means stroke with 2px width blue lines. |
+
+---
+
 ### ImageObject.blend
 
 Blend two image object. This method modifies origin data.
@@ -392,6 +409,24 @@ ImageObject ImageObject.blend(srcImageObject, offsetX, offsetY)
 | ImageObject | srcImageObject | The image object to blend on the current image object. |
 | number | offsetX | The x offset of srcImageObject on the current image object. |
 | number | offsetY | The y offset of srcImageObject on the current image object. |
+
+---
+
+### ImageObject.circle
+
+Draw a circle on the image object.
+
+```
+ImageObject ImageObject.circle(centerX, centerY, ra)
+```
+
+| Result |  |  |
+|--------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| number | centerX | Left position of center of the circle on the image object. |
+| number | centerY | Top position of center of the circle on the image object. |
+| number | radius | Radius of the circle. |
+| array | (optional) fill | Fill color with r, g, b and a channel, default value of every channel is 0. For example, [255, 0, 0, 1] means red. |
+| array | (optional) stroke | Stoke color with r, g, b and a channel, and line width, default value of every channel and line width is 0. For example, [0, 0, 255, 1, 2] means stroke with 2px width blue lines. |
 
 ---
 
@@ -460,7 +495,7 @@ ImageObject ImageObject.grayscale()
 
 ### ImageObject.hold
 
-Do not update image object form workplace data until `ImageObject.flush` is called. This method is only avaliable for `ImageObject.plot`. If you have many dots or lines to draw, and you'd like to do that within a loop, then you should call this method before the loop, and then call `ImageObject.flush` to update the image object.
+Do not update image object form workplace data until `ImageObject.flush` is called. This method is only avaliable for `ImageObject.plot`, `ImageObject.rect`, `ImageObject.arc`, `ImageObject.circle` and `ImageObject.poly`. If you have many geometries to draw, and you'd like to do that within a loop, then you should call this method before the loop, and then call `ImageObject.flush` to update the image object.
 
 ```
 ImageObject ImageObject.hold()
@@ -515,6 +550,53 @@ ImageObject ImageObject.plot(points, style)
 |-------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | array or array of array | points | If this parameter is array, it should contain two values, x and y. If this parameter is array of array, it should contain arrays that contain two values, x and y. For example, [x, y] or [[x0, y0], [x1, y1], ...]. You may also call this method with three parameters: x, y and style. For example, ImageObject.plot(10, 100, 'ro'). |
 | string | (optional) style | Style contains three commands to define color, dot style and line style. Colors: 'b' for blue, 'g' for green, 'r' for red, 'c' for cyan, 'm' for magenta, 'y' for yellow, 'k' for black and 'w' for white. Dot styles: '.' for dot, 'o' for circle, 's' for square, '\*' for star, '+' for plus and 'x' for cross. Line styles: '-' for dashed, '--' for solid, ':' for dotted. For example, 'go-' means green dashed lines with circle symbols, 'r\*' means red star symbols. The default style is blue solid lines without symbols. |
+
+---
+
+### ImageObject.poly
+
+An alias of `ImageObject.ploygon`.
+
+---
+
+### ImageObject.polygon
+
+Draw a polygon on the image object.
+
+```
+ImageObject ImageObject.polygon(points, fill, stroke)
+```
+
+| Parameters |  |  |
+|----------------------|--------------------|------------------------------------------------------------------------------|
+| point list | points | The point list should be a two-dimensional array like [[x0, y0], [x1, y1], ...]. |
+| array | (optional) fill | Fill color with r, g, b and a channel, default value of every channel is 0. For example, [255, 0, 0, 1] means red. |
+| array | (optional) stroke | Stroke color with r, g, b and a channel, and line width, default value of every channel and line width is 0. For example, [0, 0, 255, 1, 2] means stroke with 2px width blue lines. |
+
+---
+
+### ImageObject.rect
+
+An alias of `ImageObject.rectangle`.
+
+---
+
+### ImageObject.rectangle
+
+Draw a rectangle on the image object. This method modifies origin data.
+
+```
+ImageObject ImageObject.rectangle(left, top, width, height, fill, stroke)
+```
+
+| Result |  |  |
+|--------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| number | left | Left position of the rectangle on the image object. |
+| number | top | Top position of the rectangle on the image object. |
+| number | width | Width of the rectangle. |
+| number | height | Height of the rectangle. |
+| array | (optional) fill | Fill color with r, g, b and a channel, default value of every channel is 0. For example, [255, 0, 0, 1] means red. |
+| array | (optional) stroke | Stroke color with r, g, b and a channel, and line width, default value of every channel and line width is 0. For example, [0, 0, 255, 1, 2] means stroke with 2px width blue lines. |
 
 ---
 
