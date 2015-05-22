@@ -338,6 +338,12 @@
   </li>
 
   <li class="level_3">
+    <a href="#index_ImageObject.rgb" title="ImageObject.rgb">
+      <i class="icon-chevron-right"></i>ImageObject.rgb
+    </a>
+  </li>
+
+  <li class="level_3">
     <a href="#index_ImageObject.rgba" title="ImageObject.rgba">
       <i class="icon-chevron-right"></i>ImageObject.rgba
     </a>
@@ -1042,7 +1048,7 @@
 </table>
 <hr>
 <h3>ImageObject.blend</h3>
-<p>Blend two image object. This method modifies origin data.</p><p>The current image object will be blended with the given image object. If you&#39;d like to cover the current image object with another image object, see <code>ImageObject.paste</code>.</p><pre><code>ImageObject ImageObject.blend(srcImageObject, offsetX, offsetY)
+<p>Blend two image object. This method modifies origin data.</p><p>The current image object will be blended with the given image object. If you&#39;d like to cover the current image object with another image object, see <code>ImageObject.paste</code>.</p><pre><code>ImageObject ImageObject.blend(srcImageObject, updown, offsetX, offsetY)
 </code></pre><table>
 <thead>
 <tr>
@@ -1059,13 +1065,18 @@
 </tr>
 <tr>
 <td>number</td>
-<td>offsetX</td>
-<td>The x offset of srcImageObject on the current image object.</td>
+<td>(optional) updown</td>
+<td>Whether the image object is above or below srcImageObject, 0 means the image object is below srcImageObject, 1 means above. Default value is 0.</td>
 </tr>
 <tr>
 <td>number</td>
-<td>offsetY</td>
-<td>The y offset of srcImageObject on the current image object.</td>
+<td>(optional) offsetX</td>
+<td>The x offset of srcImageObject on the current image object, default value is 0.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>(optional) offsetY</td>
+<td>The y offset of srcImageObject on the current image object, default value is 0.</td>
 </tr>
 </tbody>
 </table>
@@ -1364,6 +1375,9 @@
 <hr>
 <h3>ImageObject.reverse</h3>
 <p>Reverse colors of the image object.</p><pre><code>ImageObject ImageObject.reverse()
+</code></pre><hr>
+<h3>ImageObject.rgb</h3>
+<p>Convert an image object to RGB. This method modifies origin data.</p><pre><code>ImageObject ImageObject.rgb()
 </code></pre><hr>
 <h3>ImageObject.rgba</h3>
 <p>Convert an image object to RGBA. This method modifies origin data.</p><pre><code>ImageObject ImageObject.rgba()
