@@ -401,14 +401,15 @@ Blend two image object. This method modifies origin data.
 The current image object will be blended with the given image object. If you'd like to cover the current image object with another image object, see `ImageObject.paste`.
 
 ```
-ImageObject ImageObject.blend(srcImageObject, offsetX, offsetY)
+ImageObject ImageObject.blend(srcImageObject, updown, offsetX, offsetY)
 ```
 
 | Parameters |  |  |
 |-------------|----------------|-------------------------------------------------------------|
 | ImageObject | srcImageObject | The image object to blend on the current image object. |
-| number | offsetX | The x offset of srcImageObject on the current image object. |
-| number | offsetY | The y offset of srcImageObject on the current image object. |
+| number | (optional) updown | Whether the image object is above or below srcImageObject, 0 means the image object is below srcImageObject, 1 means above. Default value is 0. |
+| number | (optional) offsetX | The x offset of srcImageObject on the current image object, default value is 0. |
+| number | (optional) offsetY | The y offset of srcImageObject on the current image object, default value is 0. |
 
 ---
 
@@ -623,6 +624,16 @@ Reverse colors of the image object.
 
 ```
 ImageObject ImageObject.reverse()
+```
+
+---
+
+### ImageObject.rgb
+
+Convert an image object to RGB. This method modifies origin data.
+
+```
+ImageObject ImageObject.rgb()
 ```
 
 ---
