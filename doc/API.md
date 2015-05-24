@@ -374,6 +374,20 @@ two-dimensional array gridjs.zeros(width, height)
 
 ---
 
+### ImageObject.affine
+
+Affine transform the image object.
+
+```
+ImageObject ImageObject.affine(matrix)
+```
+
+| Parameters |  |  |
+|-----------------------|--------|----------------------------------------------------------------------------|
+| two-dimensional array | matrix | The affine matrix like [[M11, M12, M13], [M21, M22, M23]]. The 3rd row of affine matrix is always [0, 0, 1], so you needn't mention it. |
+
+---
+
 ### ImageObject.arc
 
 Draw an arc on the image object.
@@ -382,7 +396,7 @@ Draw an arc on the image object.
 ImageObject ImageObject.arc(centerX, centerY, radius, startDegree, endDegree, fill, stroke)
 ```
 
-| Result |  |  |
+| Parameters |  |  |
 |--------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | number | centerX | Left position of center of the arc on the image object. |
 | number | centerY | Top position of center of the arc on the image object. |
@@ -613,8 +627,8 @@ ImageObject ImageObject.resize(newWidth, newHeight)
 
 | Parameters |  |  |
 |------------|-----------|---------------------------------|
-| number | newWidth | New width of the image object. |
-| number | newHeight | New height of the image object. |
+| number | newWidth | New width of the image object. If the value is smaller than 1, it will be regarded as scale. |
+| number | newHeight | New height of the image object. If the value is smaller than 1, it will be regarded as scale. |
 
 ---
 

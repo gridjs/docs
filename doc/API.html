@@ -230,6 +230,12 @@
   </li>
 
   <li class="level_3">
+    <a href="#index_ImageObject.affine" title="ImageObject.affine">
+      <i class="icon-chevron-right"></i>ImageObject.affine
+    </a>
+  </li>
+
+  <li class="level_3">
     <a href="#index_ImageObject.arc" title="ImageObject.arc">
       <i class="icon-chevron-right"></i>ImageObject.arc
     </a>
@@ -998,12 +1004,31 @@
 </tbody>
 </table>
 <hr>
+<h3>ImageObject.affine</h3>
+<p>Affine transform the image object.</p><pre><code>ImageObject ImageObject.affine(matrix)
+</code></pre><table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>two-dimensional array</td>
+<td>matrix</td>
+<td>The affine matrix like [[M11, M12, M13], [M21, M22, M23]]. The 3rd row of affine matrix is always [0, 0, 1], so you needn&#39;t mention it.</td>
+</tr>
+</tbody>
+</table>
+<hr>
 <h3>ImageObject.arc</h3>
 <p>Draw an arc on the image object.</p><pre><code>ImageObject ImageObject.arc(centerX, centerY, radius, startDegree, endDegree, fill, stroke)
 </code></pre><table>
 <thead>
 <tr>
-<th>Result</th>
+<th>Parameters</th>
 <th></th>
 <th></th>
 </tr>
@@ -1363,12 +1388,12 @@
 <tr>
 <td>number</td>
 <td>newWidth</td>
-<td>New width of the image object.</td>
+<td>New width of the image object. If the value is smaller than 1, it will be regarded as scale.</td>
 </tr>
 <tr>
 <td>number</td>
 <td>newHeight</td>
-<td>New height of the image object.</td>
+<td>New height of the image object. If the value is smaller than 1, it will be regarded as scale.</td>
 </tr>
 </tbody>
 </table>
