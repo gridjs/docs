@@ -236,6 +236,12 @@
   </li>
 
   <li class="level_3">
+    <a href="#index_ImageObject.affinec" title="ImageObject.affinec">
+      <i class="icon-chevron-right"></i>ImageObject.affinec
+    </a>
+  </li>
+
+  <li class="level_3">
     <a href="#index_ImageObject.arc" title="ImageObject.arc">
       <i class="icon-chevron-right"></i>ImageObject.arc
     </a>
@@ -1019,6 +1025,40 @@
 <td>two-dimensional array</td>
 <td>matrix</td>
 <td>The affine matrix like [[M11, M12, M13], [M21, M22, M23]]. The 3rd row of affine matrix is always [0, 0, 1], so you needn&#39;t mention it.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>ImageObject.affinec</h3>
+<p>Affine transform the image object with the given corners. Cause affine transformation has 6 independent degrees of freedom, only the first three corners will be accepted if you give out them four all.</p><pre><code>ImageObject ImageObject.affinec(topLeft, topRight, bottomLeft, bottomRight)
+</code></pre><table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>array or null</td>
+<td>topLeft</td>
+<td>Top left corner of the affined image.</td>
+</tr>
+<tr>
+<td>array or null</td>
+<td>topRight</td>
+<td>Top right corner of the affined image.</td>
+</tr>
+<tr>
+<td>array or null</td>
+<td>bottomLeft</td>
+<td>Bottom left corner of the affined image.</td>
+</tr>
+<tr>
+<td>array or null</td>
+<td>bottomRight</td>
+<td>Bottom right corner of the affined image.</td>
 </tr>
 </tbody>
 </table>
