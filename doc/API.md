@@ -388,6 +388,23 @@ ImageObject ImageObject.affine(matrix)
 
 ---
 
+### ImageObject.affinec
+
+Affine transform the image object with the given corners. Cause affine transformation has 6 independent degrees of freedom, only the first three corners will be accepted if you give out them four all.
+
+```
+ImageObject ImageObject.affinec(topLeft, topRight, bottomLeft, bottomRight)
+```
+
+| Parameters |  |  |
+|-----------------------|--------|----------------------------------------------------------------------------|
+| array or null | topLeft | Top left corner of the affined image. |
+| array or null | topRight | Top right corner of the affined image. |
+| array or null | bottomLeft | Bottom left corner of the affined image. |
+| array or null | bottomRight | Bottom right corner of the affined image. |
+
+---
+
 ### ImageObject.arc
 
 Draw an arc on the image object.
