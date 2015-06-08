@@ -10,7 +10,7 @@ To use GridJS in your code, just create a script element within any web page:
 
 ### Open An Image
 
-GridJS provides tree ways to open image, from URL, from image data and from pixel object. To open an image from URL, you can call `gridjs.open` method:
+GridJS provides three ways to open image, from URL, from image data and from pixel object. To open an image from URL, you can call `gridjs.open` method:
 
 ```
 gridjs.open('picture.jpg', function(im) {
@@ -35,7 +35,7 @@ To open an image from pixel, you can call `gridjs.getImageObjectFromPixel` metho
 im = gridjs.getImageObjectFromPixel(pixel);
 ```
 
-`pixel` in above code is a pixel object, you can learn more at <http://gridjs.org/docs/API.html#index_Pixel Object>.
+`pixel` in above code is a pixel object, you can learn more at <http://gridjs.org/docs/API.html#index_Pixel%20Object>.
 
 ### Create A Blank Image
 
