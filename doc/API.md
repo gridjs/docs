@@ -449,7 +449,7 @@ ImageObject ImageObject.blend(srcImageObject, updown, offsetX, offsetY)
 Draw a circle on the image object.
 
 ```
-ImageObject ImageObject.circle(centerX, centerY, ra)
+ImageObject ImageObject.circle(centerX, centerY, radius, fill, stroke)
 ```
 
 | Result |  |  |
