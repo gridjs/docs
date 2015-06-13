@@ -1,11 +1,11 @@
 # Get Start
 
-GridJS is a JavaScript imaging library for web programming, it makes image processing easier in browsers. You can download it from <https://cdn.jsdelivr.net/gridjs/0.1.0/gridjs.min.js>.
+GridJS is a JavaScript imaging library for web programming, it makes image processing easier in browsers.
 
 To use GridJS in your code, just create a script element within any web page:
 
 ```
-<script src="gridjs.js"></script>
+<script src="//cdn.jsdelivr.net/gridjs/0.1.0/gridjs.min.js"></script>
 ```
 
 ### Open An Image
