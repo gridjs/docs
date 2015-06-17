@@ -96,7 +96,7 @@ If dstArray is a number, then calculate every value of srcArray divide by dstArr
 Notice: this method is not a traditional definition of matrix divide.
 
 ```
-two-dimensional array gridjs.divide(srcArray, dstArray)
+two-dimensional array gridjs.divide(srcArray, dstArray, defaultValue)
 ```
 
 | Parameters |  |  |
