@@ -709,6 +709,23 @@ ImageObject ImageObject.show(canvas)
 
 ---
 
+### ImageObject.text
+
+[Dev] Draw text on the image object.
+
+```
+ImageObject ImageObject.text(left, top, text, style)
+```
+
+| Parameters |  |  |
+|------------|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| number | left | The left position to draw text. |
+| number | top | The top position to draw text. |
+| string | text | The text to draw. |
+| array | style | An array of text style. The style contains font size, text align, text base line, font style, font weight, font variant, font family and text color. The unit of font size is px, such as 20px, text align may be start/end/center/left/right, text base line may be top/bottom/middle/alphabetic/hanging, font style may be italic/oblque, font weight may be bold/bolder/lighter, font variant may be small-caps, text color is an array contains 4 numbers r, g, b and a. The type of value of font weight can also be number, and available values are 100/200/300/400/500/600/700/800/900. For example, ["20px", "Arial", "left", "middle", 700, [255, 0, 0, 1]]. |
+
+---
+
 ### ImageObject.update
 
 An alias of `ImageObject.updateImageData`.
