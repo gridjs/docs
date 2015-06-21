@@ -374,6 +374,12 @@
   </li>
 
   <li class="level_3">
+    <a href="#index_ImageObject.text" title="ImageObject.text">
+      <i class="icon-chevron-right"></i>ImageObject.text
+    </a>
+  </li>
+
+  <li class="level_3">
     <a href="#index_ImageObject.update" title="ImageObject.update">
       <i class="icon-chevron-right"></i>ImageObject.update
     </a>
@@ -1481,6 +1487,40 @@
 <td>canvas element or img element</td>
 <td>canvas</td>
 <td>The canvas on which to show the image object.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>ImageObject.text</h3>
+<p>[Dev] Draw text on the image object.</p><pre><code>ImageObject ImageObject.text(left, top, text, style)
+</code></pre><table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>left</td>
+<td>The left position to draw text.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>top</td>
+<td>The top position to draw text.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>text</td>
+<td>The text to draw.</td>
+</tr>
+<tr>
+<td>array</td>
+<td>style</td>
+<td>An array of text style. The style contains font size, text align, text base line, font style, font weight, font variant, font family and text color. The unit of font size is px, such as 20px, text align may be start/end/center/left/right, text base line may be top/bottom/middle/alphabetic/hanging, font style may be italic/oblque, font weight may be bold/bolder/lighter, font variant may be small-caps, text color is an array contains 4 numbers r, g, b and a. The type of value of font weight can also be number, and available values are 100/200/300/400/500/600/700/800/900. For example, [&quot;20px&quot;, &quot;Arial&quot;, &quot;left&quot;, &quot;middle&quot;, 700, [255, 0, 0, 1]].</td>
 </tr>
 </tbody>
 </table>
