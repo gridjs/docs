@@ -45,7 +45,7 @@ ImageObject gridjs.blank(width, height, fill)
 
 ---
 
-### gridjs.`
+### gridjs.conv
 
 An alias of `gridjs.convolution`.
 
