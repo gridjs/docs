@@ -45,7 +45,7 @@ ImageObject gridjs.blank(width, height, fill)
 
 ---
 
-### gridjs.conv
+### gridjs.`
 
 An alias of `gridjs.convolution`.
 
@@ -53,7 +53,7 @@ An alias of `gridjs.convolution`.
 
 ### gridjs.convolution
 
-Calculate convolution of two two-dimensional arrays. The result has the same size with srcArray. The result is a new two two-dimensional array.
+Calculate convolution of two two-dimensional arrays. The result has the same size with srcArray. The result is a new two-dimensional array.
 
 ```
 two-dimensional array gridjs.convolution(srcArray, maskArray)
