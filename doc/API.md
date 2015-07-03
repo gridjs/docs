@@ -556,7 +556,7 @@ ImageObject ImageObject.load(left, top, width, height)
 
 ### ImageObject.paste
 
-Past another image object to the current image object with the given position.
+Paste another image object to the current image object with the given position.
 
 ```
 ImageObject ImageObject.paste(srcImageObject, left, top)
