@@ -711,7 +711,7 @@ ImageObject ImageObject.show(canvas)
 
 ### ImageObject.text
 
-[Dev] Draw text on the image object.
+[Since 0.1.1] Draw text on the image object.
 
 ```
 ImageObject ImageObject.text(left, top, text, style)
