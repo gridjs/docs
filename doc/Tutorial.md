@@ -122,7 +122,7 @@ More methods can be found at <http://gridjs.org/docs/API.html#index_ImageObject>
 
 Basic image processing methods are very limited, so you may need edit pixel to process the image. GridJS provides a pixel object in every image object, so you can edit pixel very easy with GridJS.
 
-You can learn more about pixel object at <http://gridjs.org/docs/API.html#index_Pixel Object>.
+You can learn more about pixel object at <http://gridjs.org/docs/API.html#index_Pixel%20Object>.
 
 ### Find Image Edges
 
