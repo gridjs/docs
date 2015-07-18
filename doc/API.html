@@ -43,7 +43,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>GridJS <small>Version: 0.1.1 By @Sneezry</small></h1>
+        <h1>GridJS <small>Version: 0.1.4 By @Sneezry</small></h1>
         <p class="lead">
           A JavaScript Imaging Library
         </p>
@@ -298,6 +298,12 @@
   <li class="level_3">
     <a href="#index_ImageObject.load" title="ImageObject.load">
       <i class="icon-chevron-right"></i>ImageObject.load
+    </a>
+  </li>
+
+  <li class="level_3">
+    <a href="#index_ImageObject.mask" title="ImageObject.mask">
+      <i class="icon-chevron-right"></i>ImageObject.mask
     </a>
   </li>
 
@@ -1286,6 +1292,25 @@
 <td>number</td>
 <td>height</td>
 <td>Height of the size to load.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>ImageObject.mask</h3>
+<p>[Since 0.1.4] Use the mask to hide portions of the layer and reveal the layers below. This method modifies origin data.</p><pre><code>ImageObject ImageObject.mask(maskImageObject)
+</code></pre><table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ImageObject</td>
+<td>maskImageObject</td>
+<td>The mask image object. Colors of the mask is not important. Size of the mask should be the same as the origin image object.</td>
 </tr>
 </tbody>
 </table>

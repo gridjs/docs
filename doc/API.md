@@ -554,6 +554,20 @@ ImageObject ImageObject.load(left, top, width, height)
 
 ---
 
+### ImageObject.mask
+
+[Since 0.1.4] Use the mask to hide portions of the layer and reveal the layers below. This method modifies origin data.
+
+```
+ImageObject ImageObject.mask(maskImageObject)
+```
+
+| Parameters |  |  |
+|-------------|-----------------|-----------------------------------------------------------------------------------------------------------------------------|
+| ImageObject | maskImageObject | The mask image object. Colors of the mask is not important. Size of the mask should be the same as the origin image object. |
+
+---
+
 ### ImageObject.paste
 
 Paste another image object to the current image object with the given position.
