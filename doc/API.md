@@ -556,7 +556,7 @@ ImageObject ImageObject.load(left, top, width, height)
 
 ### ImageObject.mask
 
-[Since 0.1.4] Use the mask to hide portions of the layer and reveal the layers below. This method modifies origin data.
+[Since 0.1.3] Use the mask to hide portions of the layer and reveal the layers below. This method modifies origin data.
 
 ```
 ImageObject ImageObject.mask(maskImageObject)
